@@ -1,0 +1,79 @@
+{% extends 'polls/base.html' %}
+{% load static %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+    .panel-body p{
+        color: steelblue;
+        font-size: 30px;
+
+        margin-bottom: 30px;
+        margin-top: 0;
+
+    }
+
+    .panel-footer .btn{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+
+</style>
+
+
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="polls/index.html">WebSiteName</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">Alıştırmalar</a></li>
+            <li><a href="#">Dersler</a></li>
+            <li><a href="#">İş</a></li>
+            <li><a href="#">Yarışmalar</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    {% block body %}
+    {% for tutorial_item in object_list %}
+        <div class="col-xs-14 col-lg-6 col-sm-6 col-md-6">
+          <div class="panel panel-default text-center">
+
+
+            <div class="panel-body">
+                <a href="{% url 'polls:tutorial_lecture' tutorial_item.id %}"
+                   style="text-decoration: none">
+                    <p style="font-size: 30px; color: steelblue;
+                    margin-top: 0; margin-bottom: 30px; padding: 25px">
+                        <img src="{{ tutorial_item.tutorial_logo }}">
+                        &nbsp;
+                        {{ tutorial_item.tutorial_name }}
+                    </p>
+
+                </a>
+            </div>
+
+            <div class="panel-footer">
+                <a class="btn btn-lg" href="{% url 'polls:tutorial_lecture' tutorial_item.id %}">
+                    <h3 style="font-size: 24px">
+                        Konular
+                    </h3>
+                </a>
+            </div>
+
+          </div>
+    </div>
+    {% endfor %}
+    {% endblock %}
+

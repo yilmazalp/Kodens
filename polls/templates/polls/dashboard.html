@@ -1,0 +1,55 @@
+{% extends 'polls/base.html' %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+
+
+    </style>
+
+
+    {% block body %}
+
+
+    <div class="w3-container" style="width: 1500px; margin-top: -25px; background-color: #3b688e; height: 75px">
+        <h3 style="margin-top: 20px; color: white; margin-left: 75px">{{ practice.practice_name}}</h3>
+        <!--<hr style="border-color: #9ddff8; margin-top: 30px">-->
+    </div>
+
+    {% for area_item in practice.practice_area_set.all%}
+        <div class="col-sm-6">
+          <div class="panel panel-default text-center" style="margin-left: 75px; margin-right: 90px; height: 120px">
+
+                <a href="{% url 'polls:question_detail' area_item.id %}" style="text-decoration: none; color: #000000">
+                    <div class="col-sm-12">
+                        <p style="color: #074263; margin-left: 5px; padding:10px; margin-top: 10px; font-size: 18px">
+                            {{ area_item.area_name}}
+                        </p>
+
+                        <button type="button" class="btn btn-primary"
+                                style="background-color: steelblue; margin-bottom: 5px"
+                                href="{% url 'polls:question_detail' area_item.id %}">
+                            Sorular
+                        </button>
+                    </div>
+                    <div class="col-sm-10">
+
+
+                    </div>
+
+                </a>
+
+
+          </div>
+
+        </div>
+
+    {% endfor %}
+
+    {% endblock %}
+
+
+
+

@@ -1,0 +1,64 @@
+{% extends 'polls/base.html' %}
+{% block title  %}Kayıt Ol{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-12 col-md-7">
+            <div class="panel panel-default" style="margin-left: 50%; background-color: whitesmoke">
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {#% include 'polls/practice_form.html' %#}
+                        {{ form.media }}
+                        {% for field in form %}
+                            <div class="form-group text-center">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <span class="text-danger small">{{ field.errors }}</span>
+                                </div>
+
+                                <label class="control-group text-center" >
+                                    <!--input class="form-control" value=""-->
+                                    {{ field }}
+                                </label>
+
+                            </div>
+                        {% endfor %}
+
+                        <div class="form-group text-center">
+                            <div class="col-sm-12 col-md-14 col-lg-14">
+                                <button style="width: 230px" type="submit" class="btn btn-success">Giriş Yap</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

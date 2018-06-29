@@ -1,0 +1,100 @@
+{% extends 'polls/base.html' %}
+{% block title  %}Yeni Bir Soru Ekle{% endblock %}
+
+{% block body %}
+
+
+    <style>
+
+    .row{
+        margin-left: 200px;
+    }
+
+
+</style>
+
+    <div class="container-fluid" style="margin-left: 75px">
+
+        <h2>Girdiler</h2>
+        <p>{{ question.question_area_name }}</p>
+             <div class="form-group">
+
+                {{formset.management_form}}
+
+                <form action="" method="post">{% csrf_token %}
+                    <div class="row" style="margin-left: -270px">
+                        {{ formset.management_form }}
+                        {% for form in formset %}
+                            <div class="col-sm-offset-2 col-sm-3">
+                                {{ form }}
+                                {{ question.field }}
+                            </div>
+
+                        {% endfor %}
+                    </div>
+
+                <button style="width: 384px; margin-top: 25px" type="submit" class="btn btn-success">Kaydet</button>
+
+                </form>
+
+             </div>
+
+
+
+    </div>
+
+
+
+<!--div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-12 col-md-10">
+            <div class="panel panel-default">
+                <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                    {#% csrf_token %#}
+                        {#% include 'polls/practice_form.html' %#}
+
+                    {#  #}{ inputs.management_form }}
+
+
+                    {#% for input_form in inputs.forms %#}
+
+                        {#% if forloop.first %#}
+                            {#% for field in input_form.visible_fields %#}
+                                {#  #}{ field.label | capfirst }}
+                            {#% endfor %#}
+
+                        {#% endif %#}
+
+                    {#% endfor %#}
+
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <input type="submit" value="Save"/>
+                            <a href="{#% url 'polls:question' %#}">Kaydet</a>
+                        </div>
+                    </div>
+                </form>
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>-->
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

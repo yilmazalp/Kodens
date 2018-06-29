@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    {% load staticfiles %}
+
+    <!--<link rel="stylesheet" type="text/css" href="{ static 'polls/stylecss.css' %}"/>-->
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+
+
+        @media only screen and (max-width : 990px){
+
+            #myNavbar{
+                background-color: #2f393f;
+                margin-left: -16px;
+                margin-right: -16px;
+
+            }
+
+            .navbar-toggle{
+                display: block;
+            }
+
+            .dropdown-toggle:active, .open .dropdown-toggle {
+                background-color: #2f393f !important;
+            }
+
+            .navbar-header {
+                float: none;
+            }
+
+
+            .navbar-collapse {
+                border-top: 1px solid transparent;
+                box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+
+            }
+
+            .navbar-collapse.collapse {
+                display: none!important;
+            }
+
+            .navbar-nav {
+                float: none!important;
+                margin: 7.5px;
+
+            }
+
+            .navbar-nav >li {
+                float: none;
+            }
+
+            .navbar-nav >li >a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .collapse.in{
+                display:block !important;
+            }
+
+        }
+
+        body{
+            padding-top: 75px;
+            background-color: ghostwhite;
+        }
+
+
+        .navbar-inverse{
+            height: 50px;
+            background-color: #2f393f;
+            border-color: #2f393f;
+            width: 100%;
+        }
+
+        .navbar-inverse .navbar-nav > li {
+            margin-bottom: 5px;
+            font-size: 13px;
+            margin-left: 25px;
+        }
+
+        .navbar-inverse .navbar-nav > li > a {
+            color: white;
+
+        }
+
+        .navbar-inverse .navbar-header{
+            margin-left: 75px;
+        }
+
+        .navbar-inverse .navbar-header > a {
+
+            color: white;
+            margin-bottom: 15px;
+
+        }
+
+
+        .navbar-default{
+            height: 50px;
+            background-color: white;
+            border-color: white;
+            width: 100%;
+
+        }
+
+        .navbar-default .navbar-nav > li {
+            margin-bottom: 5px;
+            margin-left: 25px;
+            margin-right: 75px;
+            font-size: 15px;
+            font-weight: bold;
+
+        }
+
+
+        .navbar-default .navbar-nav > li > a {
+            color: skyblue;
+
+
+        }
+
+        .navbar-default .navbar-header{
+            margin-left: 75px;
+        }
+
+        .navbar-default .navbar-header > a {
+            margin-top: 10px;
+            color: steelblue;
+
+        }
+
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: white !important;
+            background-color: skyblue !important;
+        }
+
+
+
+
+
+        .panel{
+            border: 1px solid lightsteelblue;
+            border-radius:0;
+            transition: box-shadow 0.5s;
+            margin-left: 75px;
+            margin-top: 30px;
+            margin-right: 100px;
+            width: 75%;
+            background-color: white;
+
+        }
+
+        .panel a h3{
+            margin-left: 10px;
+            font-size: 21px;
+        }
+
+        .panel a button{
+            margin-left: 5px;
+
+        }
+
+
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0,0,0, .05);
+        }
+
+        .panel-heading {
+            color: #fff !important;
+            background-color: white !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .panel .thumbnail {
+
+            padding: 0 0 15px 0;
+            border-radius: 0;
+            border: none;
+            background-color: white;
+
+
+        }
+
+        .panel .thumbnail img{
+            width: 100%;
+            height: 250px;
+
+        }
+
+
+
+        .panel-footer {
+            background-color: whitesmoke !important;
+
+        }
+
+        .panel-footer h3 {
+            font-size: 10px;
+        }
+
+        .panel-footer h4 {
+           choose deepskyblue;
+            font-size: 50px;
+        }
+
+        .panel-footer .btn {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            background-color: steelblue;
+            color: #fff;
+        }
+
+        #sidebar-wrapper{
+            background: white;
+            width: 300px;
+            height: 100%;
+        }
+
+        #sidebar-wrapper ul{
+            color: rgba(230,230,230,0);
+            list-style: none;
+            padding: 15px 10px;
+        }
+
+        #sidebar-wrapper ul li{
+            color: #074263;
+            padding: 15px 10px;
+            margin-left: 60px;
+            border-bottom: 1px solid rgba(100,100,100,0.3);
+
+        }
+
+        #sidebar-wrapper ul li a{
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+
+        #userDropdown{
+            margin-right: 85px;
+
+        }
+
+        #userDropdownList{
+            padding: 15px;
+            margin-right: 85px;
+            margin-top: 0;
+
+        }
+
+        #userDropdownList li{
+            padding: 10px;
+            border-bottom: 1px solid rgba(100,100,100,0.3);
+
+        }
+
+        #userDropdownList li a:hover{
+            background: none;
+        }
+
+        #footarea{
+            background-color: #2f393f;
+            height: 75px;
+            width: 100%;
+            bottom: 0;
+            margin-top: 50px;
+
+
+        }
+
+        #footarea p{
+            margin-top: 30px;
+            margin-left: 600px;
+        }
+
+         .input-group{
+            margin-top: 5px;
+        }
+
+        #searchButton{
+            margin-top: 5px;
+            height: 30px;
+        }
+
+        #txtSearch{
+            margin-top: 5px;
+            width: 250px;
+            height: 30px;
+        }
+
+
+
+
+
+        /*#subArea{
+            position: absolute;
+            margin-top: -133px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            clear: both;
+            background-color: #187ab2;
+        }*/
+
+
+
+    </style>
+
+</head>
+<body>
+
+    {% if request.user.is_authenticated %}
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href= "#">kodenstitüsü</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="{% url 'polls:index' %}">
+                                <span class="glyphicon glyphicon-home" style="margin-right: 5px"></span>&nbsp;Alıştırmalar
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'polls:tutorial' %}">
+                                <span class="glyphicon glyphicon-book" style="margin-right: 5px"></span>&nbsp;Dersler
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-time" style="margin-right: 5px"></span>&nbsp;Yarışmalar
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-briefcase" style="margin-right: 5px"></span>&nbsp;İş
+                            </a>
+                        </li>
+
+                        <li>
+
+                            <form class="form-inline" action="" method="GET">
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Ara" id="txtSearch"/>
+                                <div class="input-group-btn">
+                                    <button id="searchButton" class="btn btn-primary" type="submit">
+                                        <span id="searchIconArea" class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+
+
+                        </li>
+
+
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" id="userDropdown" class="dropdown-toggle" data-toggle="dropdown">
+                                {{ user.username }}
+                                <span class="glyphicon glyphicon-triangle-bottom" style="margin-right: 15px"></span>
+                            </a>
+                            <ul class="dropdown-menu" id="userDropdownList">
+                                <li>
+                                    <a href="{% url 'polls:hacker' user.id %}">
+                                        <span class="glyphicon glyphicon-user" style="margin-right: 5px"></span>&nbsp;Kullanıcı Profili
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{% url 'polls:question' %}">
+                                        <span class="glyphicon glyphicon-plus" style="margin-right: 5px"></span>&nbsp;Soru Ekle
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{% url 'polls:edit_profile' user.id %}">
+                                        <span  class="glyphicon glyphicon-wrench" style="margin-right: 5px"></span>&nbsp;Profili Düzenle
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{% url 'polls:logout' %}">
+                                        <span class="glyphicon glyphicon-off" style="margin-right: 5px"></span>&nbsp;Oturumu Kapat
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    {% endif %}
+
+    {% if not request.user.is_authenticated %}
+
+        <nav class="navbar navbar-default bg-primary navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href= "#">WebSiteName</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="" style="margin-right: 0">
+                            <a href="{% url 'polls:login' %}">
+                                <span aria-hidden="true"></span>&nbsp;Giriş Yap
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="{% url 'polls:register' %}">
+                                <span aria-hidden="true"></span>Kaydol
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    {% endif %}
+
+    {% block body %}
+
+
+    {% endblock %}
+</body>
+
+<footer>
+
+     <div id="footarea" class="col-md-12 col-sm-12">
+         <p style="color: white">Tüm hakları saklıdır</p>
+     </div>
+</footer>
+
+</html>

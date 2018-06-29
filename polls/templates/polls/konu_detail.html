@@ -1,0 +1,196 @@
+{% extends 'polls/base.html' %}
+{% load static %}
+{% load staticfiles %}
+{% load polls_tags %}
+{% block body %}
+
+
+    <link rel="stylesheet" type="text/css" href="https://codemirror.net/lib/codemirror.css"
+          xmlns:right="http://www.w3.org/1999/xhtml">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+    <link rel="stylesheet" type="text/css" href="https://codemirror.net/theme/ambiance.css">
+    <link rel="stylesheet" type="text/css" href="https://codemirror.net/theme/monokai.css">
+    <link rel="stylesheet" type="text/css" href="https://codemirror.net/theme/solarized.css">
+
+    <script type="text/javascript" src="{%  static 'CodeMirror/lib/codemirror.js' %}"></script>
+    <script type="text/javascript" src="{%  static 'CodeMirror/mode/javascript/javascript.js' %}"></script>
+    <script type="text/javascript" src="{%  static 'CodeMirror/mode/python/python.js' %}"></script>
+    <script type="text/javascript" src="{%  static 'CodeMirror/mode/php/php.js' %}"></script>
+    <script type="text/javascript" src="{%  static 'CodeMirror/mode/clike/clike.js' %}"></script>
+    <script src="{% static 'editor.js' %}" type="text/javascript"></script>
+    <script src="{% static 'base.js' %}" type="text/javascript"></script>
+
+
+    <style>
+
+        .container{
+            width: 575px;
+            height: 600px;
+            background-color: ghostwhite;
+            overflow: scroll;
+            margin-left: 75px;
+
+        }
+
+        .CodeMirror{
+            /*margin-top: 75px;*/
+            right: 10px;
+            height: 600px;
+            width: 600px;
+        }
+
+        #output{
+            margin-left: 90px;
+            width: 1175px;
+
+
+        }
+
+
+    </style>
+
+
+    <div class="col-sm-6">
+        <div class="container">
+            <h1 id="language">{{ tutorial_lecture.lecture_discipline }}</h1>
+            <h4>{{ tutorial.tutorial_name }}</h4>
+            <p>{{ tutorial_lecture.lecture_area_text|safe }}</p>
+
+
+            <!--<textarea id="programInputField" style="display: none" class="container-fluid"></textarea>
+            <textarea id="programInputField2" style="display: none" class="container-fluid"></textarea>
+            <textarea id="storeInputField" style="display: none" class="container-fluid">{#  #}{ tutorial_lecture.lecture_area_input }}</textarea>
+            <pre id="programOutputField"  class="container-fluid">{#  #}{ tutorial_lecture.lecture_area_output }}</pre>-->
+
+        </div>
+    </div>
+
+
+        <textarea id="template-html" name="code" class="CodeMirror" >print("Hello World! I am a Python compiler :)")</textarea>
+
+        <br>
+
+        {% csrf_token %}
+        <!--<input type="hidden" id="submitcodeurl" formmethod="post" formaction="{#% url "polls:submit_code" %#}"/>-->
+        <input type='hidden' name='csrfmiddlewaretoken' value='{{ csrf_token }}' />
+
+
+        <button type="button" id="run" value="{% url "polls:run_subject_code" %}" class="btn btn-group"
+                style="position: absolute; right: 85px;">Çalıştır</button>
+
+        <button type="button" id="submit" value="{% url "polls:submit_subject_code" %}" class="btn btn-success"
+                style="position: absolute; right: 180px; ">Gönder</button>
+        <br>
+        <br>
+        <pre id="output" class="container-fluid"></pre>
+
+
+
+
+        <script type="text/javascript">
+
+        var editor = CodeMirror.fromTextArea(document.getElementById('template-html'), {
+                        lineNumbers: true,
+                        mode: "python",
+                        theme: "monokai",
+                        indentWithTabs: true,
+                        matchBrackets: true,
+                        readOnly: false,
+                    });
+
+
+        function submitCode() {
+
+            var prog = editor.getDoc().getValue();
+
+            $.ajax({
+                type: 'POST',
+                url: $('#submit').val(),
+                data: {
+                    language: $('#language').text(),
+                    code: prog,
+                    lecture_question: {{ tutorial_lecture.id }}
+                },
+
+                success: submitSuccess,
+                error: function (data) {
+                    submitError(data);
+                },
+
+            });
+
+        }
+
+         function runCode() {
+
+            var prog = editor.getValue();
+            var resultArea = document.getElementById("output");
+
+
+            $.ajax({
+                type: 'POST',
+                url: $('#run').val(),
+                data: {
+                    language: $('#language').text(),
+                    code: prog,
+                    lecture_question : {{ tutorial_lecture.id }}
+                },
+
+                success: runSuccess,
+                error: function(data) {
+                    submitError(data);
+                },
+
+	        });
+
+        }
+
+
+        function submitSuccess(data, textstatus, jqXHR) {
+            //console.log(data);
+            var output = $('#output');
+	        output.html('');
+	        output.append('<p>' + data + '</p>');
+         }
+
+         function runSuccess(data, textstatus, jqXHR) {
+            //console.log(data);
+            var output = $('#output');
+	        output.html('');
+	        output.append('<p>' + data + '</p>');
+        }
+
+
+        $(document).ready(function() {
+	        $('#submit').click(submitCode);
+	        $('#run').click(runCode);
+
+
+	        //$('#language').click(selectLanguage);
+            //$('input[type="radio"]').click(selectTheme);
+	        //editor = decorateCodeMirror($('#language').val());
+        });
+
+
+
+
+
+
+    </script>
+
+
+    {% endblock %}
+
+
+
+
+

@@ -1,0 +1,35 @@
+{% extends 'polls/base.html' %}
+
+
+{% block body %}
+
+    <div class="col-sm-4">
+
+
+        <div class="panel panel-default text-center" style="margin-top: 20px; margin-left: 75px">
+            <img src="{{ user.userprofile.face_url|default_if_none:'static/media/AdaLovelace.png' }}">
+            <h4>{{ user.userprofile.name }}</h4>
+            <h4>{{ user.username }}</h4>
+            <h4>{{ user.userprofile.school }}</h4>
+            <h4>{{ user.userprofile.website }}</h4>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="col-sm-6" style="padding: 50px 50px;">
+
+        <h2 style="font-family: 'Times New Roman', bold,monospace">Toplam Puan : {{ user.userprofile.point }}</h2>
+        <br>
+        <h2 style="font-family: 'Times New Roman', bold,monospace">Aldığı Dersler</h2>
+        <br>
+
+        <a class="btn btn-primary" href="{% url 'polls:sorularim' user.pk %}">Sorduğu Sorular</a>
+
+        <h2 style="font-family: 'Times New Roman', bold,monospace">Seviye</h2>
+    </div>
+
+{% endblock %}
+

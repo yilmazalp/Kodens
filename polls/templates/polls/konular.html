@@ -1,0 +1,72 @@
+{% extends 'polls/base.html' %}
+{% load static %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <style>
+
+
+        @media screen and (max-width : 800px) {
+
+            #myNavbar{
+                background-color: #2f393f;
+            }
+
+        }
+
+
+
+    </style>
+
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="polls/index.html">WebSiteName</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">Alıştırmalar</a></li>
+            <li><a href="#">Dersler</a></li>
+            <li><a href="#">İş</a></li>
+            <li><a href="#">Yarışmalar</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block body %}
+
+        <div class="w3-container" style="width: 1500px; margin-top: -25px; background-color: #3b688e; height: 75px">
+            <h3 style="margin-top: 20px; color: white; margin-left: 75px">{{ tutorial.tutorial_name}}</h3>
+            <!--<hr style="border-color: #9ddff8; margin-top: 30px">-->
+        </div>
+
+        {% for tutorial_subject_item in tutorial.tutorial_lecture_set.all %}
+            <div class="col-sm-6">
+                <div class="panel panel-default text-center" style="margin-left: 75px">
+                    <div class="panel-heading">
+                        <a href="{% url 'polls:subject_detail' tutorial_subject_item.id %}" style="text-decoration: none; color: #000000">
+                            <h3 style="font-weight: 500; font-size: 25px; color: #074263">{{ tutorial_subject_item.lecture_area_name}}</h3>
+                        </a>
+                    </div>
+
+                    <div class="panel-footer">
+                        <a class="btn btn-lg" href="{% url 'polls:subject_detail' tutorial_subject_item.id %}">Derse Git</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+
+
+
+
+

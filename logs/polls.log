@@ -1,0 +1,2485 @@
+ERROR 2017-10-01 23:31:31,046 polls.views.submitcode:  dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 19, in __init__
+    language = int(language)
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 185, in submitcode
+    request.POST.get('input', ''),
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 21, in __init__
+    raise Exception('%s dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir' % str(language))
+Exception:  dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir
+ERROR 2017-10-01 23:31:31,050 polls.views.submitcode:  dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 19, in __init__
+    language = int(language)
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 185, in submitcode
+    request.POST.get('input', ''),
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 21, in __init__
+    raise Exception('%s dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir' % str(language))
+Exception:  dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir
+ERROR 2017-10-01 23:32:11,060 polls.views.submitcode:  dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 19, in __init__
+    language = int(language)
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 185, in submitcode
+    request.POST.get('input', ''),
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 21, in __init__
+    raise Exception('%s dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir' % str(language))
+Exception:  dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir
+ERROR 2017-10-01 23:32:11,062 polls.views.submitcode:  dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 19, in __init__
+    language = int(language)
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 185, in submitcode
+    request.POST.get('input', ''),
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 21, in __init__
+    raise Exception('%s dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir' % str(language))
+Exception:  dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir
+ERROR 2017-10-01 23:32:15,171 polls.views.submitcode:  dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 19, in __init__
+    language = int(language)
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 185, in submitcode
+    request.POST.get('input', ''),
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 21, in __init__
+    raise Exception('%s dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir' % str(language))
+Exception:  dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir
+ERROR 2017-10-01 23:32:15,176 polls.views.submitcode:  dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 19, in __init__
+    language = int(language)
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 185, in submitcode
+    request.POST.get('input', ''),
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 21, in __init__
+    raise Exception('%s dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir' % str(language))
+Exception:  dil kodu geçersiz. Dil kodunun tamsayý olmasý gerekir
+ERROR 2017-10-01 23:33:40,549 polls.views.submitcode: 'practice_question' object has no attribute 'name'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 29, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 10, in instance
+    executor = Executor._executors.get(language.name)
+AttributeError: 'practice_question' object has no attribute 'name'
+ERROR 2017-10-01 23:33:40,550 polls.views.submitcode: 'practice_question' object has no attribute 'name'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 29, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 10, in instance
+    executor = Executor._executors.get(language.name)
+AttributeError: 'practice_question' object has no attribute 'name'
+ERROR 2017-10-02 01:06:54,064 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 13, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 30, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 17, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 01:06:54,070 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 13, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 30, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 17, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 16:00:52,134 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 14, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 30, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 18, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 16:00:52,134 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 14, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 30, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 18, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 16:03:26,741 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 13, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 17, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 16:03:26,742 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 13, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 17, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 16:03:36,165 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 13, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 17, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 16:03:36,173 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 13, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 17, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 16:20:03,437 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 13, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 17, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 16:20:03,443 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 13, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 17, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 16:29:28,111 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 13, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 17, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 16:29:28,111 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 13, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 17, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 16:39:10,288 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 13, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 17, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 16:39:10,296 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 13, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 17, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 17:07:06,038 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 14, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ImportError: No module named 'python'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 18, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 17:07:06,041 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 14, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ImportError: No module named 'python'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 18, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 17:29:59,750 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 12, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 16, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 17:29:59,754 polls.views.submitcode: Kod çalýþtýrýlamadý.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 12, in instance
+    executor = __import__('%s' % language, fromlist=[language])
+ValueError: Empty module name
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 189, in submitcode
+    result = executor.execute()
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 28, in execute
+    executor = Executor.instance(self.language)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\executor.py", line 16, in instance
+    raise Exception('Kod çalýþtýrýlamadý.')
+Exception: Kod çalýþtýrýlamadý.
+ERROR 2017-10-02 18:32:52,817 polls.views.submitcode: name 'result' is not defined
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    data = json.dumps(result)
+NameError: name 'result' is not defined
+ERROR 2017-10-02 18:32:52,817 polls.views.submitcode: name 'result' is not defined
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    data = json.dumps(result)
+NameError: name 'result' is not defined
+ERROR 2017-10-02 22:12:51,370 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:12:51,377 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:13:32,785 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:13:32,785 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:13:34,140 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:13:34,140 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:13:53,037 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:13:53,042 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:13:54,985 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:13:54,985 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:13:55,624 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:13:55,625 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:16:11,121 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:16:11,129 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 22:54:44,609 polls.views.submitcode: <code object <module> at 0x0407ACF0, file "<string>", line 1> is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    data = json.dumps(result)
+  File "C:\Python34\lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <code object <module> at 0x0407ACF0, file "<string>", line 1> is not JSON serializable
+ERROR 2017-10-02 22:54:44,610 polls.views.submitcode: <code object <module> at 0x0407AE80, file "<string>", line 1> is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    data = json.dumps(result)
+  File "C:\Python34\lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <code object <module> at 0x0407AE80, file "<string>", line 1> is not JSON serializable
+ERROR 2017-10-02 22:59:26,280 polls.views.submitcode: <code object <module> at 0x0407AF70, file "<string>", line 1> is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    data = json.dumps(result)
+  File "C:\Python34\lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <code object <module> at 0x0407AF70, file "<string>", line 1> is not JSON serializable
+ERROR 2017-10-02 22:59:26,280 polls.views.submitcode: <code object <module> at 0x0407AE80, file "<string>", line 1> is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    data = json.dumps(result)
+  File "C:\Python34\lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <code object <module> at 0x0407AE80, file "<string>", line 1> is not JSON serializable
+ERROR 2017-10-02 23:09:17,491 polls.views.submitcode: <code object <module> at 0x03F12A20, file "<string>", line 1> is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    data = json.dumps(result)
+  File "C:\Python34\lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <code object <module> at 0x03F12A20, file "<string>", line 1> is not JSON serializable
+ERROR 2017-10-02 23:09:17,495 polls.views.submitcode: <code object <module> at 0x03F12A20, file "<string>", line 1> is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    data = json.dumps(result)
+  File "C:\Python34\lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <code object <module> at 0x03F12A20, file "<string>", line 1> is not JSON serializable
+ERROR 2017-10-02 23:11:56,363 polls.views.submitcode: <code object <module> at 0x04067660, file "<string>", line 1> is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    data = json.dumps(result)
+  File "C:\Python34\lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <code object <module> at 0x04067660, file "<string>", line 1> is not JSON serializable
+ERROR 2017-10-02 23:11:56,368 polls.views.submitcode: <code object <module> at 0x042A2840, file "<string>", line 1> is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    data = json.dumps(result)
+  File "C:\Python34\lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <code object <module> at 0x042A2840, file "<string>", line 1> is not JSON serializable
+ERROR 2017-10-02 23:13:31,673 polls.views.submitcode: <code object <module> at 0x041B57F0, file "<string>", line 1> is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    data = json.dumps(result)
+  File "C:\Python34\lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <code object <module> at 0x041B57F0, file "<string>", line 1> is not JSON serializable
+ERROR 2017-10-02 23:13:31,678 polls.views.submitcode: <code object <module> at 0x041B57F0, file "<string>", line 1> is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    data = json.dumps(result)
+  File "C:\Python34\lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <code object <module> at 0x041B57F0, file "<string>", line 1> is not JSON serializable
+ERROR 2017-10-02 23:35:30,181 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 23:35:30,185 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 23:39:16,315 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 23:39:16,320 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 23:42:00,247 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 23:42:00,252 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 23:42:51,139 polls.views.submitcode: 'CodeExecutor' object has no attribute 'python_code'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.python_code, executor.input)
+AttributeError: 'CodeExecutor' object has no attribute 'python_code'
+ERROR 2017-10-02 23:42:51,140 polls.views.submitcode: 'CodeExecutor' object has no attribute 'python_code'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.python_code, executor.input)
+AttributeError: 'CodeExecutor' object has no attribute 'python_code'
+ERROR 2017-10-02 23:47:51,604 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 23:47:51,604 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 23:48:33,229 polls.views.submitcode: unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-02 23:50:00,740 polls.views.submitcode: invalid syntax (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return eval(python_code)
+  File "<string>", line 1
+    print('merhaba')print(naber)
+                        ^
+SyntaxError: invalid syntax
+ERROR 2017-10-02 23:53:20,991 polls.views.submitcode: invalid syntax (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 192, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return exec(python_code)
+  File "<string>", line 1
+    print('merhaba')print('naber')
+                        ^
+SyntaxError: invalid syntax
+ERROR 2017-10-03 03:24:20,665 polls.views.submitcode: missing_input
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 186, in submitcode
+    request.POST.get('input', ''),
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 15, in __init__
+    raise Exception(Messages.MISSING_INPUT)
+Exception: missing_input
+ERROR 2017-10-03 03:26:03,403 polls.views.submitcode: missing_input
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 185, in submitcode
+    request.POST.get('code'),
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 15, in __init__
+    raise Exception(Messages.MISSING_INPUT)
+Exception: missing_input
+ERROR 2017-10-03 03:27:07,415 polls.views.submitcode: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 186, in submitcode
+    request.POST.get('input'),
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 17, in __init__
+    common.check_input(input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\common.py", line 34, in check_input
+    if len(input) > max_input_size:
+TypeError: object of type 'NoneType' has no len()
+ERROR 2017-10-03 17:56:39,383 polls.views.submitcode: HTTP status code must be an integer.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\http\response.py", line 54, in __init__
+    self.status_code = int(status)
+ValueError: invalid literal for int() with base 10: 'polls/question_explain.html'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 199, in submitcode
+    return HttpResponse(data, mimetype, template_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\http\response.py", line 301, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\http\response.py", line 56, in __init__
+    raise TypeError('HTTP status code must be an integer.')
+TypeError: HTTP status code must be an integer.
+ERROR 2017-10-03 17:59:01,032 polls.views.submitcode: HTTP status code must be an integer.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\http\response.py", line 54, in __init__
+    self.status_code = int(status)
+TypeError: int() argument must be a string or a number, not 'Template'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 199, in submitcode
+    return HttpResponse(data, mimetype, template_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\http\response.py", line 301, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\http\response.py", line 56, in __init__
+    raise TypeError('HTTP status code must be an integer.')
+TypeError: HTTP status code must be an integer.
+ERROR 2017-10-03 18:19:04,307 polls.views.submitcode: dictionary update sequence element #0 has length 1; 2 is required
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 199, in submitcode
+    return JsonResponse(dict(data))
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+ERROR 2017-10-03 18:22:13,991 polls.views.submitcode: dictionary update sequence element #0 has length 1; 2 is required
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 199, in submitcode
+    return JsonResponse(dict(data))
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+ERROR 2017-10-03 18:39:13,113 polls.views.submitcode: [Errno 22] Invalid argument: 'C:\\Users\\User\\PycharmProjects\\web_ilk\\polls\\templates\\<django.template.backends.django.Template object at 0x04255650>'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 199, in submitcode
+    return render(request, template_name, {'data':data})
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\loaders\base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\loaders\filesystem.py", line 28, in get_contents
+    with io.open(origin.name, encoding=self.engine.file_charset) as fp:
+OSError: [Errno 22] Invalid argument: 'C:\\Users\\User\\PycharmProjects\\web_ilk\\polls\\templates\\<django.template.backends.django.Template object at 0x04255650>'
+ERROR 2017-10-03 20:14:40,659 polls.views.submitcode: unexpected EOF while parsing (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return exec(python_code)
+  File "<string>", line 1
+    print(5+int(9/3)
+                   ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-03 23:00:15,945 polls.views.submitcode: unexpected EOF while parsing (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return exec(python_code)
+  File "<string>", line 1
+    print(5+int(9/3)
+                   ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-03 23:05:39,418 polls.views.submitcode: unexpected EOF while parsing (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 38, in pythonExecute
+    return exec(python_code)
+  File "<string>", line 1
+    print(5+int(9/3)
+                   ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2017-10-03 23:52:46,068 polls.views.submitcode: [Errno 22] Invalid argument: "C:\\Users\\User\\PycharmProjects\\web_ilk\\polls\\templates\\<WSGIRequest: POST '\\cevapla\\gonder'>"
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 198, in submitcode
+    return render(template_name, request, {'output' : result})
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\loaders\base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\loaders\filesystem.py", line 28, in get_contents
+    with io.open(origin.name, encoding=self.engine.file_charset) as fp:
+OSError: [Errno 22] Invalid argument: "C:\\Users\\User\\PycharmProjects\\web_ilk\\polls\\templates\\<WSGIRequest: POST '\\cevapla\\gonder'>"
+ERROR 2017-10-03 23:53:45,010 polls.views.submitcode: [Errno 22] Invalid argument: "C:\\Users\\User\\PycharmProjects\\web_ilk\\polls\\templates\\<WSGIRequest: POST '\\cevapla\\gonder'>"
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 198, in submitcode
+    return render(template_name, request, {'result':result})
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\loaders\base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\loaders\filesystem.py", line 28, in get_contents
+    with io.open(origin.name, encoding=self.engine.file_charset) as fp:
+OSError: [Errno 22] Invalid argument: "C:\\Users\\User\\PycharmProjects\\web_ilk\\polls\\templates\\<WSGIRequest: POST '\\cevapla\\gonder'>"
+ERROR 2017-10-04 00:10:09,989 polls.views.submitcode: missing_input
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 187, in submitcode
+    request.POST.get('input', ''),
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 15, in __init__
+    raise Exception(Messages.MISSING_INPUT)
+Exception: missing_input
+ERROR 2017-10-04 00:40:37,206 polls.views.submitcode: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 39, in pythonExecute
+    return common.crop_output(output)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\common.py", line 42, in crop_output
+    if len(output) > max_output_size:
+TypeError: object of type 'NoneType' has no len()
+ERROR 2017-10-04 00:45:58,920 polls.views.submitcode: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 194, in submitcode
+    result = common.crop_output(result)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\common.py", line 42, in crop_output
+    if len(output) > max_output_size:
+TypeError: object of type 'NoneType' has no len()
+ERROR 2017-10-04 17:34:01,200 polls.views.submitcode: 'NoneType' object has no attribute 'stdout'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 194, in submitcode
+    data = json.dumps(result.stdout)
+AttributeError: 'NoneType' object has no attribute 'stdout'
+ERROR 2017-10-04 19:00:39,893 polls.views.submitcode: 'NoneType' object has no attribute 'getvalue'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    result = executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 45, in pythonExecute
+    return buffer.getvalue()
+AttributeError: 'NoneType' object has no attribute 'getvalue'
+ERROR 2017-10-13 17:08:21,269 polls.views.submitcode: context must be a dict rather than RequestContext.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 208, in submitcode
+    return HttpResponse(template_name.render(context))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\backends\django.py", line 64, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\context.py", line 287, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than RequestContext.
+ERROR 2017-10-13 17:08:54,002 polls.views.submitcode: context must be a dict rather than RequestContext.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 208, in submitcode
+    return HttpResponse(template_name.render(context))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\backends\django.py", line 64, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\context.py", line 287, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than RequestContext.
+ERROR 2017-10-13 17:09:14,201 polls.views.submitcode: context must be a dict rather than RequestContext.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 208, in submitcode
+    return HttpResponse(template_name.render(context))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\backends\django.py", line 64, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\context.py", line 287, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than RequestContext.
+ERROR 2017-10-13 19:15:38,056 polls.views.submitcode: context must be a dict rather than RequestContext.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 208, in submitcode
+    else: # POST ve XHR olmayan çaðrýlarý engelle
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\backends\django.py", line 64, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\template\context.py", line 287, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than RequestContext.
+ERROR 2017-10-13 21:04:35,623 polls.views.submitcode: In order to allow non-dict objects to be serialized set the safe parameter to False.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 203, in submitcode
+    return JsonResponse(result, status=201)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\http\response.py", line 524, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+ERROR 2017-10-13 21:05:14,908 polls.views.submitcode: In order to allow non-dict objects to be serialized set the safe parameter to False.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 203, in submitcode
+    return JsonResponse(data, status=201)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\http\response.py", line 524, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+ERROR 2017-10-13 21:05:36,651 polls.views.submitcode: In order to allow non-dict objects to be serialized set the safe parameter to False.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 203, in submitcode
+    return JsonResponse(data, mimetype)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\http\response.py", line 524, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+ERROR 2017-10-14 00:11:11,511 polls.views.submitcode: must be str, not int
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 201, in submitcode
+    outputFile.write(result)
+TypeError: must be str, not int
+ERROR 2017-10-14 00:13:07,883 polls.views.submitcode: must be str, not int
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 201, in submitcode
+    outputFile.write(call(["node", "C:\\Users\\User\\PycharmProjects\\web_ilk\\staticfiles\\compiler.js"]))
+TypeError: must be str, not int
+ERROR 2017-10-14 00:19:26,944 polls.views.submitcode: write() takes exactly 1 argument (0 given)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 201, in submitcode
+    outputFile.write()
+TypeError: write() takes exactly 1 argument (0 given)
+ERROR 2017-10-15 22:18:19,355 polls.views.submitcode: <_io.TextIOWrapper name='C:/Users/User/Desktop/output.txt' mode='r' encoding='cp1254'> is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 206, in submitcode
+    data = json.dumps(file)
+  File "C:\Python34\lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <_io.TextIOWrapper name='C:/Users/User/Desktop/output.txt' mode='r' encoding='cp1254'> is not JSON serializable
+ERROR 2017-10-16 20:22:55,848 polls.views.submitcode: [Errno 2] No such file or directory: 'C:/Users/User/Desktop/temp.java'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 199, in submitcode
+    executor.JavaExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 57, in JavaExecute
+    codeFile = open('C:/Users/User/Desktop/temp.java', 'r+')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/User/Desktop/temp.java'
+ERROR 2017-10-16 22:14:31,160 polls.views.submitcode: [Errno 2] No such file or directory: 'C:/Users/User/Documents/Java Proje/Temp/src/temp.java'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 199, in submitcode
+    executor.JavaExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 57, in JavaExecute
+    codeFile = open('C:/Users/User/Documents/Java Proje/Temp/src/temp.java', 'r+')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/User/Documents/Java Proje/Temp/src/temp.java'
+ERROR 2017-10-16 22:15:23,955 polls.views.submitcode: [Errno 2] No such file or directory: 'C:/Users/User/Documents/Java Proje/Temp/src/temp.java'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 199, in submitcode
+    executor.JavaExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 57, in JavaExecute
+    codeFile = open('C:/Users/User/Documents/Java Proje/Temp/src/temp.java', 'r+')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/User/Documents/Java Proje/Temp/src/temp.java'
+ERROR 2017-10-16 22:17:01,363 polls.views.submitcode: [Errno 2] No such file or directory: 'C:/Users/User/Documents/Java Proje/Temp/src/Temp.java'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 199, in submitcode
+    executor.JavaExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 57, in JavaExecute
+    codeFile = open('C:/Users/User/Documents/Java Proje/Temp/src/Temp.java', 'r+')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/User/Documents/Java Proje/Temp/src/Temp.java'
+ERROR 2017-10-17 22:01:19,372 polls.views.submitcode: [Errno 2] No such file or directory: 'C:/Users/User/Documents/Java Proje/Temp/src/temp/Temp.java'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 199, in submitcode
+    executor.JavaExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 57, in JavaExecute
+    codeFile = open('C:/Users/User/Documents/Java Proje/Temp/src/temp/Temp.java', 'r+')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/User/Documents/Java Proje/Temp/src/temp/Temp.java'
+ERROR 2017-10-23 00:14:34,039 polls.views.submitcode: must be str, not QuerySet
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 202, in submitcode
+    executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 55, in pythonExecute
+    inputFile.write(input)
+TypeError: must be str, not QuerySet
+ERROR 2017-10-23 00:24:09,670 polls.views.submitcode: must be str, not QuerySet
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 202, in submitcode
+    executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 55, in pythonExecute
+    inputFile.write(input)
+TypeError: must be str, not QuerySet
+ERROR 2017-10-23 00:39:45,617 polls.views.submitcode: must be str, not QuerySet
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 202, in submitcode
+    executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 55, in pythonExecute
+    inputFile.write(input)
+TypeError: must be str, not QuerySet
+ERROR 2017-10-23 01:02:01,229 polls.views.submitcode: object of type 'DeferredAttribute' has no len()
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 194, in submitcode
+    input_value
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 24, in __init__
+    common.check_input(input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\common.py", line 34, in check_input
+    if len(input) > max_input_size:
+TypeError: object of type 'DeferredAttribute' has no len()
+ERROR 2017-10-23 18:56:17,317 polls.views.submitcode: 'QuerySet' object has no attribute 'input_text'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 195, in submitcode
+    input_value.input_text
+AttributeError: 'QuerySet' object has no attribute 'input_text'
+ERROR 2017-10-23 20:43:15,705 polls.views.submitcode: 'practice_question' object has no attribute 'input_text'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 195, in submitcode
+    input_value.input_text
+AttributeError: 'practice_question' object has no attribute 'input_text'
+ERROR 2017-10-23 20:43:35,171 polls.views.submitcode: object of type 'practice_question' has no len()
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 195, in submitcode
+    input_value
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 24, in __init__
+    common.check_input(input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\common.py", line 34, in check_input
+    if len(input) > max_input_size:
+TypeError: object of type 'practice_question' has no len()
+ERROR 2017-10-23 22:12:33,572 polls.views.submitcode: 'CodeExecutor' object has no attribute 'input'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 205, in submitcode
+    executor.pythonExecute(executor.code, executor.input)
+AttributeError: 'CodeExecutor' object has no attribute 'input'
+ERROR 2017-10-23 23:28:51,784 polls.views.submitcode: __init__() missing 1 required positional argument: 'input'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 193, in submitcode
+    request.POST.get('code'),
+TypeError: __init__() missing 1 required positional argument: 'input'
+ERROR 2017-10-23 23:32:18,582 polls.views.submitcode: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 194, in submitcode
+    request.POST.get('input')
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 25, in __init__
+    common.check_input(input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\common.py", line 34, in check_input
+    if len(input) > max_input_size:
+TypeError: object of type 'NoneType' has no len()
+ERROR 2017-10-23 23:33:15,044 polls.views.submitcode: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 194, in submitcode
+    request.POST.get('input'),
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 25, in __init__
+    common.check_input(input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\common.py", line 34, in check_input
+    if len(input) > max_input_size:
+TypeError: object of type 'NoneType' has no len()
+ERROR 2017-10-24 00:15:29,443 polls.views.submitcode: 'CodeExecutor' object has no attribute 'input'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 213, in submitcode
+    executor.JavaExecute(executor.code, executor.input)
+AttributeError: 'CodeExecutor' object has no attribute 'input'
+ERROR 2017-10-24 18:00:23,552 polls.views.submitcode: not writable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 204, in submitcode
+    executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 61, in pythonExecute
+    file.write(line)
+io.UnsupportedOperation: not writable
+ERROR 2017-10-24 19:16:25,942 polls.views.submitcode: 'str' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 204, in submitcode
+    executor.pythonExecute(executor.code, executor.input)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 56, in pythonExecute
+    print(input_id(i))
+TypeError: 'str' object is not callable
+ERROR 2017-10-24 20:19:36,911 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 208, in submitcode
+    input_value = practice_question_input.objects.get(id=i)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-24 20:55:19,852 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 208, in submitcode
+    input_value = practice_question_input.objects.get(id=i)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-24 20:59:40,950 polls.views.submitcode: No practice_question_input matches the given query.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\shortcuts.py", line 85, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 208, in submitcode
+    input_value = get_object_or_404(practice_question_input, id=i)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\shortcuts.py", line 93, in get_object_or_404
+    raise Http404('No %s matches the given query.' % queryset.model._meta.object_name)
+django.http.response.Http404: No practice_question_input matches the given query.
+ERROR 2017-10-24 22:26:38,304 polls.views.submitcode: get() returned more than one practice_question_input -- it returned 3!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 212, in submitcode
+    input_value = practice_question_input.objects.get(input_belong_practice__practice_question_input__input_id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+polls.models.MultipleObjectsReturned: get() returned more than one practice_question_input -- it returned 3!
+ERROR 2017-10-24 22:27:31,163 polls.views.submitcode: 'QuerySet' object has no attribute 'input_text'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 213, in submitcode
+    input_id = input_value.input_text
+AttributeError: 'QuerySet' object has no attribute 'input_text'
+ERROR 2017-10-24 23:33:11,748 polls.views.submitcode: invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 206, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice=question_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+ERROR 2017-10-24 23:36:15,346 polls.views.submitcode: invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 206, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice=question_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+ERROR 2017-10-24 23:36:35,416 polls.views.submitcode: invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 206, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice=question_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+ERROR 2017-10-24 23:38:18,991 polls.views.submitcode: invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 206, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice=question_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+ERROR 2017-10-24 23:53:16,712 polls.views.submitcode: invalid literal for int() with base 10: 'Merhaba Dünya'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 207, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice=question_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'Merhaba Dünya'
+ERROR 2017-10-24 23:58:20,401 polls.views.submitcode: invalid literal for int() with base 10: 'Merhaba Dünya'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 207, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice=question_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'Merhaba Dünya'
+ERROR 2017-10-24 23:58:46,231 polls.views.submitcode: invalid literal for int() with base 10: 'Merhaba Dünya'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 207, in submitcode
+    question = practice_question_input.objects.get(input_belong_practice=question_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'Merhaba Dünya'
+ERROR 2017-10-25 00:50:13,195 polls.views.submitcode: invalid literal for int() with base 10: 'Merhaba Dünya'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 207, in submitcode
+    question = practice_question_input.objects.get(input_belong_practice=question_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'Merhaba Dünya'
+ERROR 2017-10-25 00:50:57,303 polls.views.submitcode: invalid literal for int() with base 10: 'merhaba'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 207, in submitcode
+    question = practice_question_input.objects.get(input_belong_practice="merhaba")
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'merhaba'
+ERROR 2017-10-25 00:52:04,282 polls.views.submitcode: invalid literal for int() with base 10: 'Merhaba Dünya'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 207, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice=question_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'Merhaba Dünya'
+ERROR 2017-10-25 00:55:56,241 polls.views.submitcode: 'QuerySet' object cannot be interpreted as an integer
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 211, in submitcode
+    for item in range(item_len):
+TypeError: 'QuerySet' object cannot be interpreted as an integer
+ERROR 2017-10-25 00:56:23,194 polls.views.submitcode: unsupported operand type(s) for +: 'practice_question_input' and 'int'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 213, in submitcode
+    input_value = practice_question_input.objects.get(id=item+1)
+TypeError: unsupported operand type(s) for +: 'practice_question_input' and 'int'
+ERROR 2017-10-25 00:56:56,108 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 213, in submitcode
+    input_value = practice_question_input.objects.get(id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 00:59:32,529 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 213, in submitcode
+    input_value = practice_question_input.objects.get(id=item)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 00:59:48,011 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 213, in submitcode
+    input_value = practice_question_input.objects.get(id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 16:52:33,482 polls.views.submitcode: invalid literal for int() with base 10: 'Merhaba Dünya'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 207, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice=str(question_name))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'Merhaba Dünya'
+ERROR 2017-10-25 16:53:00,809 polls.views.submitcode: invalid literal for int() with base 10: 'Merhaba Dünya'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 207, in submitcode
+    question = practice_question_input.objects.get(input_belong_practice=str(question_name))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'Merhaba Dünya'
+ERROR 2017-10-25 16:54:21,240 polls.views.submitcode: invalid literal for int() with base 10: 'Merhaba Dünya'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 207, in submitcode
+    question = practice_question_input.objects.get(input_belong_practice=str(question_name))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'Merhaba Dünya'
+ERROR 2017-10-25 17:10:39,624 polls.views.submitcode: Related Field got invalid lookup: name
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 207, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice__name__exact=question_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1197, in build_filter
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookups[0]))
+django.core.exceptions.FieldError: Related Field got invalid lookup: name
+ERROR 2017-10-25 17:11:07,329 polls.views.submitcode: invalid literal for int() with base 10: 'Merhaba Dünya'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 207, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice__exact=question_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'Merhaba Dünya'
+ERROR 2017-10-25 17:36:06,373 polls.views.submitcode: invalid literal for int() with base 10: 'Çarpým'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 207, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice__exact=question_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'Çarpým'
+ERROR 2017-10-25 17:39:07,849 polls.views.submitcode: invalid literal for int() with base 10: 'Çarpým'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 206, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice__exact=question_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'Çarpým'
+ERROR 2017-10-25 17:39:25,004 polls.views.submitcode: get() returned more than one practice_question_input -- it returned 3!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 212, in submitcode
+    input_value = practice_question_input.objects.get(input_belong_practice__practice_question_input__input_id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+polls.models.MultipleObjectsReturned: get() returned more than one practice_question_input -- it returned 3!
+ERROR 2017-10-25 17:52:29,160 polls.views.submitcode: invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 206, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice_id=question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+ERROR 2017-10-25 17:53:12,570 polls.views.submitcode: invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 206, in submitcode
+    question = practice_question_input.objects.filter(input_belong_practice_id=int(question_id))
+ValueError: invalid literal for int() with base 10: ''
+ERROR 2017-10-25 18:06:53,452 polls.views.submitcode: 'ModelBase' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 210, in submitcode
+    input_items = practice_question_input.objects.filter(practice_question)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
+    arg, value = filter_expr
+TypeError: 'ModelBase' object is not iterable
+ERROR 2017-10-25 18:08:01,220 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 213, in submitcode
+    input_value = question.get(input_id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 18:08:33,718 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 213, in submitcode
+    input_value = question.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 18:26:42,562 polls.views.submitcode: 'QuerySet' object has no attribute 'input_id'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 214, in submitcode
+    input_value = question.input_id
+AttributeError: 'QuerySet' object has no attribute 'input_id'
+ERROR 2017-10-25 18:27:08,761 polls.views.submitcode: 'QuerySet' object has no attribute 'input_text'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 216, in submitcode
+    input_file = input_value.input_text
+AttributeError: 'QuerySet' object has no attribute 'input_text'
+ERROR 2017-10-25 18:28:12,083 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 206, in submitcode
+    question = practice_question_input.objects.get(input_belong_practice_id=int(question_id))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 18:29:02,910 polls.views.submitcode: 'QuerySet' object has no attribute 'input_text'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 216, in submitcode
+    input_file = input_value.input_text
+AttributeError: 'QuerySet' object has no attribute 'input_text'
+ERROR 2017-10-25 18:30:34,111 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 214, in submitcode
+    input_value = question.get(id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 18:30:56,557 polls.views.submitcode: 'QuerySet' object has no attribute 'input_text'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 216, in submitcode
+    input_file = input_value.input_text
+AttributeError: 'QuerySet' object has no attribute 'input_text'
+ERROR 2017-10-25 20:35:41,155 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 214, in submitcode
+    input_value = question.get(id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 20:35:47,978 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 214, in submitcode
+    input_value = question.get(id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 20:37:08,870 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 214, in submitcode
+    input_value = question.get(id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 20:47:41,181 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 206, in submitcode
+    question = practice_question_input.objects.get(input_belong_practice_id=question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 21:30:37,109 polls.views.submitcode: Manager isn't accessible via practice_question_input instances
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 218, in submitcode
+    input_value = question_input.objects.get(id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via practice_question_input instances
+ERROR 2017-10-25 21:46:11,060 polls.views.submitcode: get() returned more than one practice_question_input -- it returned 2!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 215, in submitcode
+    input_value = practice_question_input.objects.get(input_id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+polls.models.MultipleObjectsReturned: get() returned more than one practice_question_input -- it returned 2!
+ERROR 2017-10-25 21:56:32,763 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 214, in submitcode
+    inputs = practice_question_input.objects.get(input_belong_practice_id=question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 22:07:57,634 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 220, in submitcode
+    input_value = inputs.get(input_id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 22:08:34,938 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 220, in submitcode
+    input_value = inputs.get(pk=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 22:10:09,917 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 215, in submitcode
+    print(inputs.get(input_id=1))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 22:12:13,250 polls.views.submitcode: Cannot resolve keyword 'input_id' into field. Choices are: id, practice_discipline, practice_discipline_id, practice_question_input, question_answer_text, question_area_id, question_area_name, question_area_text, question_language_field
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 216, in submitcode
+    print(inputs.get(input_id=1))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1154, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1034, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'input_id' into field. Choices are: id, practice_discipline, practice_discipline_id, practice_question_input, question_answer_text, question_area_id, question_area_name, question_area_text, question_language_field
+ERROR 2017-10-25 22:13:12,838 polls.views.submitcode: practice_question matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 216, in submitcode
+    print(inputs.get(id=1))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question matching query does not exist.
+ERROR 2017-10-25 22:17:10,369 polls.views.submitcode: Manager isn't accessible via practice_question instances
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 220, in submitcode
+    input_value = question.objects.get(practice_question_input__input_id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via practice_question instances
+ERROR 2017-10-25 22:17:42,742 polls.views.submitcode: Manager isn't accessible via practice_question instances
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 220, in submitcode
+    input_value = question.objects.get(practice_question_input__input_id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via practice_question instances
+ERROR 2017-10-25 22:22:13,348 polls.views.submitcode: 'practice_question' object has no attribute 'input_text'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 222, in submitcode
+    input_file = input_value.input_text
+AttributeError: 'practice_question' object has no attribute 'input_text'
+ERROR 2017-10-25 22:23:08,655 polls.views.submitcode: Cannot resolve keyword 'practice_question_input' into field. Choices are: id, input_belong_practice, input_belong_practice_id, input_id, input_text, output_text
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 220, in submitcode
+    input_value = practice_question_input.objects.get(practice_question_input__input_id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1154, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1034, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'practice_question_input' into field. Choices are: id, input_belong_practice, input_belong_practice_id, input_id, input_text, output_text
+ERROR 2017-10-25 22:44:46,212 polls.views.submitcode: practice_question matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 208, in submitcode
+    question = practice_question.objects.get(id=question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question matching query does not exist.
+ERROR 2017-10-25 22:52:17,789 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 223, in submitcode
+    input_value = question.practice_question_input_set.get(input_id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 22:53:42,353 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 223, in submitcode
+    input_value = question.practice_question_input_set.get(pk=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 22:54:09,353 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 223, in submitcode
+    input_value = question.practice_question_input_set.get(pk=item)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 22:58:38,952 polls.views.submitcode: Manager isn't accessible via practice_question_input instances
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 222, in submitcode
+    input_value = item.objects.get(id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via practice_question_input instances
+ERROR 2017-10-25 22:59:59,218 polls.views.submitcode: Manager isn't accessible via practice_question instances
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 222, in submitcode
+    input_value = question.objects.get(practice_question_input__input_id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via practice_question instances
+ERROR 2017-10-25 23:01:30,578 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 222, in submitcode
+    input_value = question.practice_question_input_set.get(input_belong_practice__practice_question_input__input_id=item+1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 23:02:00,851 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 222, in submitcode
+    input_value = question.practice_question_input_set.get(pk=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-25 23:02:50,976 polls.views.submitcode: 'practice_question_input' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 222, in submitcode
+    input_value = question.practice_question_input_set.get(practice_question_input.objects.get(input_id=1))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
+    arg, value = filter_expr
+TypeError: 'practice_question_input' object is not iterable
+ERROR 2017-10-25 23:03:14,071 polls.views.submitcode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 222, in submitcode
+    input_value = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-10-30 01:08:36,538 polls.views.submitcode: get() returned more than one practice_question -- it returned 3!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 230, in submitcode
+    question = practice_question.objects.get(question_area_id=question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+polls.models.MultipleObjectsReturned: get() returned more than one practice_question -- it returned 3!
+ERROR 2017-10-30 01:09:26,985 polls.views.submitcode: get() returned more than one practice_question -- it returned 3!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 230, in submitcode
+    question = practice_question.objects.get(question_area_id=question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+polls.models.MultipleObjectsReturned: get() returned more than one practice_question -- it returned 3!
+ERROR 2017-10-30 01:09:42,104 polls.views.submitcode: get() returned more than one practice_question -- it returned 3!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 230, in submitcode
+    question = practice_question.objects.get(question_area_id=question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+polls.models.MultipleObjectsReturned: get() returned more than one practice_question -- it returned 3!
+ERROR 2017-11-04 16:24:24,737 polls.views.submitcode: argument should be string, bytes or integer, not _io.TextIOWrapper
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 247, in submitcode
+    compared_files = filecmp.cmp(file, item.output_text)
+  File "C:\Python34\lib\filecmp.py", line 51, in cmp
+    s1 = _sig(os.stat(f1))
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+ERROR 2017-11-04 16:38:23,869 polls.views.submitcode: argument should be string, bytes or integer, not _io.TextIOWrapper
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 256, in submitcode
+    compared_files = filecmp.cmp(file, answer_file)
+  File "C:\Python34\lib\filecmp.py", line 51, in cmp
+    s1 = _sig(os.stat(f1))
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+ERROR 2017-11-04 16:42:53,065 polls.views.submitcode: argument should be string, bytes or integer, not _io.TextIOWrapper
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 256, in submitcode
+    if filecmp.cmp(file, answer_file):
+  File "C:\Python34\lib\filecmp.py", line 51, in cmp
+    s1 = _sig(os.stat(f1))
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+ERROR 2017-11-04 16:59:39,788 polls.views.submitcode: argument should be string, bytes or integer, not _io.TextIOWrapper
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 256, in submitcode
+    if filecmp.cmp(file, answer_file):
+  File "C:\Python34\lib\filecmp.py", line 51, in cmp
+    s1 = _sig(os.stat(f1))
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+ERROR 2017-11-04 17:00:55,066 polls.views.submitcode: argument should be string, bytes or integer, not _io.TextIOWrapper
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 256, in submitcode
+    if filecmp.cmp(file, answer_file):
+  File "C:\Python34\lib\filecmp.py", line 51, in cmp
+    s1 = _sig(os.stat(f1))
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+ERROR 2017-11-04 17:06:00,263 polls.views.submitcode: argument should be string, bytes or integer, not _io.TextIOWrapper
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 256, in submitcode
+    if filecmp.cmp(file, answer_file):
+  File "C:\Python34\lib\filecmp.py", line 51, in cmp
+    s1 = _sig(os.stat(f1))
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+ERROR 2017-11-04 17:06:46,247 polls.views.submitcode: argument should be string, bytes or integer, not _io.TextIOWrapper
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 256, in submitcode
+    if filecmp.cmp(file, answer_file):
+  File "C:\Python34\lib\filecmp.py", line 51, in cmp
+    s1 = _sig(os.stat(f1))
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+ERROR 2017-11-04 17:11:57,868 polls.views.submitcode: argument should be string, bytes or integer, not _io.TextIOWrapper
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 256, in submitcode
+    if filecmp.cmp(file_path, answer_file):
+  File "C:\Python34\lib\filecmp.py", line 52, in cmp
+    s2 = _sig(os.stat(f2))
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+ERROR 2017-11-04 17:13:30,146 polls.views.submitcode: unsupported operand type(s) for +=: 'DeferredAttribute' and 'int'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 259, in submitcode
+    UserProfile.point += 3
+TypeError: unsupported operand type(s) for +=: 'DeferredAttribute' and 'int'
+ERROR 2017-11-04 17:14:51,560 polls.views.submitcode: unsupported operand type(s) for +: 'DeferredAttribute' and 'int'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 259, in submitcode
+    UserProfile.point = UserProfile.point +  3
+TypeError: unsupported operand type(s) for +: 'DeferredAttribute' and 'int'
+ERROR 2017-11-04 17:15:53,148 polls.views.submitcode: int() argument must be a string or a number, not 'DeferredAttribute'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 259, in submitcode
+    UserProfile.point = int(UserProfile.point) +  3
+TypeError: int() argument must be a string or a number, not 'DeferredAttribute'
+ERROR 2017-11-04 17:38:59,490 polls.views.submitcode: int() argument must be a string or a number, not 'DeferredAttribute'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 259, in submitcode
+    score = int(UserProfile.point) +  3
+TypeError: int() argument must be a string or a number, not 'DeferredAttribute'
+ERROR 2017-11-04 17:40:03,918 polls.views.submitcode: invalid literal for int() with base 10: '<django.db.models.query_utils.DeferredAttribute object at 0x03719550>'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 259, in submitcode
+    score = int(str(UserProfile.point)) +  3
+ValueError: invalid literal for int() with base 10: '<django.db.models.query_utils.DeferredAttribute object at 0x03719550>'
+ERROR 2017-11-04 17:54:57,200 polls.views.submitcode: float() argument must be a string or a number, not 'DeferredAttribute'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 260, in submitcode
+    print(float(UserProfile.point))
+TypeError: float() argument must be a string or a number, not 'DeferredAttribute'
+ERROR 2017-11-04 17:56:49,020 polls.views.submitcode: 'DeferredAttribute' object has no attribute '__add__'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 259, in submitcode
+    UserProfile.point.__add__(0.0)
+AttributeError: 'DeferredAttribute' object has no attribute '__add__'
+ERROR 2017-11-04 18:08:22,015 polls.views.submitcode: 'ForwardOneToOneDescriptor' object has no attribute 'userprofile'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 259, in submitcode
+    UserProfile.user.userprofile.point.__add__(0.0)
+AttributeError: 'ForwardOneToOneDescriptor' object has no attribute 'userprofile'
+ERROR 2017-11-04 18:16:27,765 polls.views.submitcode: get() returned more than one UserProfile -- it returned 2!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 256, in submitcode
+    score = UserProfile.objects.get(point=0.0)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+polls.models.MultipleObjectsReturned: get() returned more than one UserProfile -- it returned 2!
+ERROR 2017-11-04 18:19:01,366 polls.views.submitcode: 'User' object has no attribute 'point'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 256, in submitcode
+    score = UserProfile.objects.get(point=request.user.point)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\utils\functional.py", line 239, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'point'
+ERROR 2017-11-04 18:20:14,937 polls.views.submitcode: 'WSGIRequest' object has no attribute 'userprofile'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 256, in submitcode
+    score = UserProfile.objects.get(point=request.userprofile.point)
+AttributeError: 'WSGIRequest' object has no attribute 'userprofile'
+ERROR 2017-11-04 18:31:08,570 polls.views.submitcode: invalid literal for int() with base 10: 'alperen'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 256, in submitcode
+    hacker = UserProfile.objects.get(user='alperen')
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'alperen'
+ERROR 2017-11-05 00:13:48,049 polls.views.submitcode: argument should be string, bytes or integer, not _io.TextIOWrapper
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 285, in submitcode
+    if filecmp.cmp(read_output_file, read_answer_file, shallow=False):
+  File "C:\Python34\lib\filecmp.py", line 51, in cmp
+    s1 = _sig(os.stat(f1))
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+ERROR 2017-11-05 00:31:35,725 polls.views.submitcode: need more than 1 value to unpack
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 267, in submitcode
+    for line_output, line_answer in f1, f2:
+ValueError: need more than 1 value to unpack
+ERROR 2017-11-05 16:23:29,330 polls.views.submitcode: argument should be string, bytes or integer, not _io.TextIOWrapper
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 258, in submitcode
+    if filecmp.cmp(read_output_file, read_answer_file, shallow=False):
+  File "C:\Python34\lib\filecmp.py", line 51, in cmp
+    s1 = _sig(os.stat(f1))
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+ERROR 2017-11-05 17:05:52,767 polls.views.submitcode: 'str' object cannot be interpreted as an integer
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 267, in submitcode
+    if read_output_file.readline(count) == read_answer_file.readline(count):
+TypeError: 'str' object cannot be interpreted as an integer
+ERROR 2017-11-05 22:27:25,005 polls.views.submitTutorialCode: Tutorial_Lecture matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 348, in submitTutorialCode
+    question = Tutorial_Lecture.objects.get(lecture_area_id=lecture_question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: Tutorial_Lecture matching query does not exist.
+ERROR 2017-11-06 16:07:48,895 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 350, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-11-13 21:18:55,058 polls.views.submitcode: Can't convert 'float' object to str implicitly
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 317, in submitcode
+    response = 'Bu sorudan ' + point + 'kazandýnýz :)'
+TypeError: Can't convert 'float' object to str implicitly
+ERROR 2017-11-16 21:20:31,043 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 363, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2017-12-29 17:47:39,049 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 363, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-03-10 00:39:15,950 polls.views.runCode: [Errno 2] No such file or directory: 'static/temp.py'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 368, in runCode
+    executor.pythonExecute(executor.code, input_file, output_file)
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\compilers\code_executor.py", line 47, in pythonExecute
+    codeFile = open('static/temp.py', 'r+')
+FileNotFoundError: [Errno 2] No such file or directory: 'static/temp.py'
+ERROR 2018-03-10 22:46:35,269 polls.views.submitcode: JavaExecute() missing 1 required positional argument: 'output'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 291, in submitcode
+    executor.JavaExecute(executor.code, input_file)
+TypeError: JavaExecute() missing 1 required positional argument: 'output'
+ERROR 2018-03-10 22:46:44,221 polls.views.submitcode: JavaExecute() missing 1 required positional argument: 'output'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 291, in submitcode
+    executor.JavaExecute(executor.code, input_file)
+TypeError: JavaExecute() missing 1 required positional argument: 'output'
+ERROR 2018-03-18 02:25:16,107 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 499, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-03-21 23:49:12,528 polls.views.runTutorialCode: Tutorial_Lecture matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 738, in runTutorialCode
+    question = Tutorial_Lecture.objects.get(lecture_area_id=lecture_question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: Tutorial_Lecture matching query does not exist.
+ERROR 2018-03-21 23:52:05,015 polls.views.runTutorialCode: Tutorial_Lecture matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 738, in runTutorialCode
+    question = Tutorial_Lecture.objects.get(lecture_area_id=lecture_question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: Tutorial_Lecture matching query does not exist.
+ERROR 2018-03-21 23:53:53,909 polls.views.runTutorialCode: Tutorial_Lecture matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 738, in runTutorialCode
+    question = Tutorial_Lecture.objects.get(lecture_area_id=lecture_question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: Tutorial_Lecture matching query does not exist.
+ERROR 2018-04-14 15:55:30,009 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 459, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-04-15 20:42:25,571 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 460, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-04-15 20:55:10,974 polls.views.submitcode: practice_question matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 234, in submitcode
+    question = practice_question.objects.get(question_area_id=practice_question.pk)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question matching query does not exist.
+ERROR 2018-04-15 21:09:22,069 polls.views.submitcode: practice_question matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 234, in submitcode
+    question = practice_question.objects.get(practice_question.pk)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question matching query does not exist.
+ERROR 2018-04-15 21:10:18,075 polls.views.submitcode: 'DeferredAttribute' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 234, in submitcode
+    question = practice_question.objects.get(practice_question.question_area_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
+    arg, value = filter_expr
+TypeError: 'DeferredAttribute' object is not iterable
+ERROR 2018-04-15 21:17:47,317 polls.views.runCode: get() returned more than one practice_question -- it returned 2!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 458, in runCode
+    question = practice_question.objects.get(question_area_id=question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+polls.models.MultipleObjectsReturned: get() returned more than one practice_question -- it returned 2!
+ERROR 2018-04-15 21:41:44,392 polls.views.submitcode: practice_question matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 234, in submitcode
+    question = practice_question.objects.get(question_area_id=question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question matching query does not exist.
+ERROR 2018-04-15 21:42:36,641 polls.views.submitcode: Cannot resolve keyword '1' into field. Choices are: id, practice_discipline, practice_discipline_id, practice_question_input, question_answer_text, question_area_id, question_area_name, question_area_text, question_language_field
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 234, in submitcode
+    question = practice_question.objects.get(question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1154, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1034, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword '1' into field. Choices are: id, practice_discipline, practice_discipline_id, practice_question_input, question_answer_text, question_area_id, question_area_name, question_area_text, question_language_field
+ERROR 2018-04-15 21:48:29,190 polls.views.submitcode: Cannot resolve keyword '1' into field. Choices are: id, practice_discipline, practice_discipline_id, practice_question_input, question_answer_text, question_area_id, question_area_name, question_area_text, question_language_field
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 236, in submitcode
+    question = practice_question.objects.get(question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1154, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1034, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword '1' into field. Choices are: id, practice_discipline, practice_discipline_id, practice_question_input, question_answer_text, question_area_id, question_area_name, question_area_text, question_language_field
+ERROR 2018-04-15 21:53:46,581 polls.views.runCode: get() returned more than one practice_question -- it returned 2!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 460, in runCode
+    question = practice_question.objects.get(question_area_id=question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+polls.models.MultipleObjectsReturned: get() returned more than one practice_question -- it returned 2!
+ERROR 2018-04-15 21:54:50,695 polls.views.runCode: practice_question matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 460, in runCode
+    question = practice_question.objects.get(id=question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question matching query does not exist.
+ERROR 2018-04-15 21:58:34,431 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 462, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-04-16 01:15:50,724 polls.views.runTutorialCode: get() returned more than one Tutorial_Lecture -- it returned 2!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 777, in runTutorialCode
+    question = Tutorial_Lecture.objects.get(lecture_area_id=lecture_question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+polls.models.MultipleObjectsReturned: get() returned more than one Tutorial_Lecture -- it returned 2!
+ERROR 2018-04-16 01:16:46,847 polls.views.runTutorialCode: get() returned more than one Tutorial_Lecture -- it returned 2!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 777, in runTutorialCode
+    question = Tutorial_Lecture.objects.get(lecture_area_id=lecture_question_id)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+polls.models.MultipleObjectsReturned: get() returned more than one Tutorial_Lecture -- it returned 2!
+ERROR 2018-06-23 17:44:58,513 polls.views.runCode: get() returned more than one practice_question_input -- it returned 2!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 636, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+polls.models.MultipleObjectsReturned: get() returned more than one practice_question_input -- it returned 2!

@@ -1,0 +1,6 @@
+#include<stdio.h>
+
+int main(){
+  printf("merhaba dunya. bil");
+  return 0;
+}
