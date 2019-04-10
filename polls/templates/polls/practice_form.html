@@ -2,6 +2,9 @@
 {% for field in form %}
     <div class="panel-default"
          style="margin-left: 230px; margin-top: 15px">
+
+
+        {{ form.media }}
         <div class="col-sm-offset-2 col-sm-10">
             <span class="text-danger small">{{ field.errors }}</span>
         </div>

@@ -20,9 +20,10 @@
 
     {% for area_item in practice.practice_area_set.all%}
         <div class="col-sm-6">
+
           <div class="panel panel-default text-center" style="margin-left: 75px; margin-right: 90px; height: 120px">
 
-                <a href="{% url 'polls:question_detail' area_item.id %}" style="text-decoration: none; color: #000000">
+                <a href="{% url 'polls:question_detail' practice.slug area_item.area_slug %}" style="text-decoration: none; color: #000000">
                     <div class="col-sm-12">
                         <p style="color: #074263; margin-left: 5px; padding:10px; margin-top: 10px; font-size: 18px">
                             {{ area_item.area_name}}
@@ -30,7 +31,7 @@
 
                         <button type="button" class="btn btn-primary"
                                 style="background-color: steelblue; margin-bottom: 5px"
-                                href="{% url 'polls:question_detail' area_item.id %}">
+                                href="{% url 'polls:question_detail' practice.slug area_item.area_slug %}">
                             Sorular
                         </button>
                     </div>

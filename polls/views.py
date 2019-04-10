@@ -8,15 +8,17 @@ from django.views.generic import View, TemplateView, ListView
 from django.views.generic import RedirectView
 from django.template import loader, RequestContext
 from django.core.exceptions import ValidationError
-
+from django.contrib.auth.forms import SetPasswordForm
+from itertools import chain
 from polls.models import practice_question
 from . import forms
 from .models import practice
 from .models import practice_area
 from .models import practice_question, Tutorial_Lecture, practice_question_input
 from .forms import UserForm, LoginForm, UserEditForm, InputFormSet, QuestionForm, QuestionEditForm
-from .models import tutorial, User, UserProfile, practice_area
+from .models import tutorial, User, UserProfile, practice_area, SolvedQuestion, Friend
 from django.contrib.auth.models import User
+from django.contrib.auth.views import password_reset, password_reset_done
 from django.db.models.signals import post_save
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -28,9 +30,9 @@ from polls.compilers import compile_cpp, compile_c, wrapper
 import json
 from subprocess import call
 import filecmp
-
-
-
+from django.utils.text import slugify
+from difflib import SequenceMatcher
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 logger = logging.getLogger(__name__)
 
 
@@ -52,7 +54,6 @@ class LoginFormView(View):
             user = authenticate(username=username, password=password)
 
             if user is not None:
-
                 if user.is_active:
                     login(request, user)
                     return redirect('polls:index')
@@ -72,6 +73,8 @@ class UserFormView(View):
 
     def post(self, request):
         form = self.form_class(request.POST)
+        error_messages = {'username_exist': _("Kullanıcı adı zaten kullanılıyor."
+                                              "Lütfen farklı bir kullanıcı adı seçiniz.")}
 
         if form.is_valid():
             user = form.save(commit=False)
@@ -84,18 +87,19 @@ class UserFormView(View):
             new_user = authenticate(username= username, password= password)
 
             if user is not None:
-
                 if user.is_active:
                     login(request, new_user)
                     return redirect('polls:index')
 
-        return render(request, self.template_name, {'form': form})
+
+        return render(request, self.template_name, {'form': form, 'error_messages': error_messages})
 
 
 
 class UserFormIndexView(View):
     form_class = UserForm
     template_name = 'polls/index.html'
+
 
     def get(self, request):
         form = self.form_class(None)
@@ -105,6 +109,8 @@ class UserFormIndexView(View):
     def post(self, request):
         form = self.form_class(request.POST)
 
+
+
         if form.is_valid():
             user = form.save(commit=False)
 
@@ -116,12 +122,51 @@ class UserFormIndexView(View):
             new_user = authenticate(username= username, password= password)
 
             if user is not None:
-
                 if user.is_active:
                     login(request, new_user)
                     return redirect('polls:index')
 
+
         return render(request, self.template_name, {'form': form})
+
+
+class UserView(UpdateView):
+    template_name = 'polls/user_profile.html'
+    model = User, Friend
+    form_class = UserForm
+    #fields = '__all__'
+
+
+    #def get_context_data(self, **kwargs):
+    #    context = super(UserView, self).get_context_data(**kwargs)
+    #    context['hacker'] =  UserProfile.objects.get(id = self.request.user.pk)
+    #    return context
+
+
+    def get_object(self, **kwargs):
+        user_page = get_object_or_404(User, username = self.kwargs['username'])
+        return user_page
+
+    '''
+    def get(self, request, *args, **kwargs):
+
+        friend_list = list(Friend.objects.filter(current_user__friend__current_user= request.user.userprofile))
+
+        return render(request, self.template_name,
+                      {'friend_list': friend_list})
+
+    '''
+
+    def get_context_data(self, **kwargs):
+        context = super(UserView, self).get_context_data(**kwargs)
+        context['friend_list'] = list(Friend.objects.filter(current_user__friend__current_user=self.object.userprofile))
+        context['profile_user'] = self.request.user.userprofile
+        return context
+
+
+    def get_success_url(self, *args, **kwargs):
+        return reverse('polls:hacker', kwargs={'username':self.object.user.username})
+
 
 
 class UserQuestionView(generic.DetailView):
@@ -136,6 +181,63 @@ class UserQuestionView(generic.DetailView):
 
     def get_success_url(self, *args, **kwargs):
         return reverse('polls:sorularim', kwargs={'pk':self.object.user.pk})
+
+
+class UserAnswerView(generic.DetailView):
+    template_name = 'polls/user_solutions.html'
+    model = User
+
+
+    def get_context_data(self, **kwargs):
+        context = super(UserAnswerView, self).get_context_data(**kwargs)
+        context['practice_question'] =  practice_question.objects.all()
+        return context
+
+    def get_object(self, **kwargs):
+        user_solution_page = get_object_or_404(User, username = self.kwargs['username'])
+        return user_solution_page
+
+    def get_success_url(self, *args, **kwargs):
+        return reverse('polls:cozum', kwargs={'username':self.object.user.username})
+
+
+class FriendsView(generic.DetailView):
+    template_name = 'polls/user_profile.html'
+    model = Friend, UserProfile
+
+    #friend_name = Friend.current_user.name
+
+
+    def get_context_data(self, **kwargs):
+        context = super(FriendsView, self).get_context_data(**kwargs)
+        context['friend'] = Friend.objects.all()
+        context['user_list'] = User.objects.all()
+        #question_list = practice_question.objects.filter(question_area_name__icontains=questions)
+        return context
+
+    '''
+       def get(self, request):
+        friend_list = Friend.objects.filter(current_user__friend__current_user=request.user.userprofile)
+
+        return render(request, self.template_name,
+                      { 'friend_list': friend_list })
+    '''
+
+    #def get_queryset(self):
+    #    return Friend.objects.all()
+
+
+def change_friends(request, operation, pk):
+    new_friend = UserProfile.objects.get(pk = pk)
+    if operation == 'ekle':
+        Friend.add_friend(request.user.userprofile, new_friend)
+        Friend.add_friend(new_friend, request.user.userprofile)
+
+    elif operation == 'sil':
+        Friend.remove_friend(request.user, new_friend)
+    return redirect('polls:index')
+
+
 
 
 
@@ -160,12 +262,14 @@ class UserEditView(UpdateView):
     form_class = UserEditForm
     model = UserProfile
 
+
+
     def get_object(self, *args, **kwargs):
-        user = get_object_or_404(User, pk = self.kwargs['pk'])
-        return user.userprofile
+        #user = get_object_or_404(User, username = self.kwargs['username'])
+        return self.request.user.userprofile
 
     def get_success_url(self, *args, **kwargs):
-        return reverse('polls:edit_profile', kwargs={'pk':self.object.user.pk})
+        return reverse('polls:edit_profile')
 
 
 '''
@@ -181,8 +285,6 @@ def EditProfileView(request):
         form = UserEditForm(instance=request.user)
         args = {'form' : form}
         return render(request, 'polls/edit_profile.html', args)
-
-
 '''
 
 def logoutView(request):
@@ -193,6 +295,15 @@ def logoutView(request):
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     form_class = UserForm
+    model = practice_area, practice
+
+
+    def get_object(self, **kwargs):
+        object = get_object_or_404(practice_area, area_slug=self.kwargs['area_slug'])
+        return object
+
+    #def get_success_url(self, *args, **kwargs):
+    #    return reverse('polls:question_edit', )
 
     def get_queryset(self):
         return practice.objects.all()
@@ -200,6 +311,9 @@ class IndexView(generic.ListView):
 
     def post(self, request, *args, **kwargs):
         form = self.form_class(request.POST)
+
+        practice_question_list = practice_question.objects.all()
+
 
         if form.is_valid():
             user = form.save(commit=False)
@@ -217,38 +331,49 @@ class IndexView(generic.ListView):
                     login(request, new_user)
                     return redirect('polls:index')
 
-        return render(request, self.template_name, {'form': form})
+        return render(request, self.template_name, {'form': form })
 
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['form'] = self.form_class
+
         return context
 
 
 
-
 class DetailView(generic.DetailView):
-
     template_name = 'polls/dashboard.html'
     model = practice
 
 
-class QuestionDetailView(generic.DetailView):
+class QuestionDetailView(DetailView):
     template_name = 'polls/practice.html'
-    model = practice_area
+    model = practice_area, practice
+
 
     def get_context_data(self, **kwargs):
         context = super(QuestionDetailView, self).get_context_data(**kwargs)
         context['practice'] =  practice.objects.all()
         return context
 
-    #def get_queryset(self):
-    #    return practice_area.objects.all()
+    def get_object(self, **kwargs):
+        object = get_object_or_404(practice_area, area_slug=self.kwargs['area_slug'])
+        return object
+
+    #def get_success_url(self, *args, **kwargs):
+    #    return reverse('polls:question_edit', )
+
+    def get_queryset(self):
+        return practice_area.objects.all()
 
 class QuestionExplainView(generic.DetailView):
     template_name = 'polls/question_explain.html'
     model = practice_question, UserProfile
+
+    def get_object(self, **kwargs):
+        object = get_object_or_404(practice_question, question_slug=self.kwargs['question_slug'])
+        return object
 
     def get_queryset(self):
         return practice_question.objects.all()
@@ -256,9 +381,10 @@ class QuestionExplainView(generic.DetailView):
 
 class PracticeQuestionsView(View):
     template_name = 'polls/questions.html'
+    posted_template_name = 'polls/question_input.html'
     model = practice_question
-
     form_class = QuestionForm
+
 
 
     def get(self, request):
@@ -276,8 +402,8 @@ class PracticeQuestionsView(View):
         return render(request, self.template_name, {'form': form})
 
 
-    def get_success_url(self):
-        return reverse('polls:question')
+    def get_success_url(self, *args, **kwargs):
+        return reverse('polls:input')
 
 
 class PracticeQuestionEditView(UpdateView):
@@ -285,12 +411,31 @@ class PracticeQuestionEditView(UpdateView):
     form_class = QuestionEditForm
     model = practice_question
 
+
     def get_object(self, *args, **kwargs):
         question = get_object_or_404(practice_question, pk = self.kwargs['pk'])
         return question
 
     def get_success_url(self, *args, **kwargs):
         return reverse('polls:question_edit', kwargs={'pk':self.object.pk})
+
+
+
+class PracticeQuestionDeleteView(DeleteView):
+    model = practice_question
+    template_name = 'polls/deleted_question.html'
+    #form_class = QuestionForm
+
+
+    def get_object(self, *args, **kwargs):
+        question = get_object_or_404(practice_question, pk = self.kwargs['pk'])
+
+        if self.request.user.userprofile == question.author:
+            question.delete()
+
+
+    def get_success_url(self, *args, **kwargs):
+        return reverse('polls:question_delete', kwargs={'pk':self.object.question.pk})
 
 
 '''
@@ -329,8 +474,8 @@ class PracticeQuestionInputsView(CreateView):
 '''
 
 
-def input_form(request, pk):
-    question = get_object_or_404(practice_question, pk= pk)
+def input_form(request, question_slug):
+    question = get_object_or_404(practice_question, question_slug= question_slug)
 
     formset = forms.InputFormSet(queryset=question.practice_question_input_set.all(),
                                 initial=[{'input_belong_practice': question.pk}])
@@ -350,9 +495,13 @@ def input_form(request, pk):
         if formset.is_valid():
             inputs = formset.save(commit=False)
 
+            for input_object in formset.deleted_objects:
+                input_object.delete()
+
             for input_value in inputs:
                 input_value.question = question
                 input_value.save()
+
 
             messages.success(request, "Girdi değerleri başarıyla eklendi")
 
@@ -361,6 +510,7 @@ def input_form(request, pk):
         'formset': formset,
         'question': question,
     })
+
 
 
 def editor(request, language):
@@ -384,6 +534,7 @@ def editor(request, language):
 
 
 def submitcode(request):
+    global response
     template_name = loader.get_template('polls/question_explain.html')
 
     if request.is_ajax() and request.method == 'POST':
@@ -401,13 +552,18 @@ def submitcode(request):
 
             #language_name = request.POST.get('language')
             question_id = request.POST.get('question')
+            hacker = UserProfile.objects.get(user=request.user)
+
             point = 0
+            question_solved_count = 0
+
 
             #Python
             if executor.language=="python":
                 question = practice_question.objects.get(id = question_id)
                 count = 0
                 item_count = question.practice_question_input_set.count()
+                item_point = question.point
 
                 for item in question.practice_question_input_set.all():
                     input_file = item.input_text
@@ -428,6 +584,7 @@ def submitcode(request):
                     while output_line != '' or answer_line != '':
 
                         output_line = output_line.rstrip()
+
                         answer_line = answer_line.rstrip()
 
                         if output_line != answer_line:
@@ -438,19 +595,44 @@ def submitcode(request):
                         answer_line = read_answer_file.readline()
 
                 hacker = UserProfile.objects.get(user=request.user)
-
                 print(count)
-                if count == 0:
-                    point += item_count*5.0
+
+
+                #solved_question = SolvedQuestion.objects.get(solved_question_name=practice_question.question_area_name)
+                #solved_question = question.question_area_name
+
+                user_list = []
+
+                user_query_list = question.solved_by_user.filter(username=hacker.user.username)
+
+                for solver_user in user_query_list:
+                    user_list.append(solver_user.username)
+
+
+                if count == 0 and not hacker.user.username in user_list:
+                    point += item_point
 
                     hacker.user.userprofile.point += point
+                    #solved_question.solved_question_name = question.question_area_name
+                    #solved_question.solved_by_user.add(hacker)
+                    question.solved_by_user.add(User.objects.get(username=hacker.user.username))
+
                     hacker.save()
 
-            #C
+                    #question.save()
+                elif count == 0 and hacker.user.username in user_list:
+                    question_solved_count += 1
+                    print('soru yapildi')
+                    print(point)
+                    #response = '<h1 id = "correctAnswer">Doğru Cevap</h1>' + '\n' \
+                                #'Ancak soru daha önce çözüldüğü için puan alamadınız.' \
+
+            #C/C++
             elif executor.language=="c":
                 question = practice_question.objects.get(id=question_id)
                 count = 0
                 item_count = question.practice_question_input_set.count()
+                item_point = question.point
 
                 for item in question.practice_question_input_set.all():
                     input_file = item.input_text
@@ -469,8 +651,6 @@ def submitcode(request):
                     output_line = read_output_file.readline()
                     answer_line = read_answer_file.readline()
 
-
-
                     while output_line != '' or answer_line != '':
 
                         output_line = output_line.rstrip()
@@ -484,11 +664,30 @@ def submitcode(request):
 
                 hacker = UserProfile.objects.get(user=request.user)
 
-                if count == 0:
-                    point += item_count*5.0
+                user_list = []
+
+                user_query_list = question.solved_by_user.filter(username=hacker.user.username)
+
+                for solver_user in user_query_list:
+                    user_list.append(solver_user.username)
+
+                if count == 0 and not hacker.user.username in user_list:
+                    point += item_point
 
                     hacker.user.userprofile.point += point
+                    #solved_question.solved_question_name = question.question_area_name
+                    #solved_question.solved_by_user.add(hacker)
+                    question.solved_by_user.add(User.objects.get(username=hacker.user.username))
+
                     hacker.save()
+
+                    #question.save()
+                elif count == 0 and hacker.user.username in user_list:
+                    question_solved_count += 1
+                    print('soru yapildi')
+                    print(point)
+                    #response = '<h1 id = "correctAnswer">Doğru Cevap</h1>' + '\n' \
+                                #'Ancak soru daha önce çözüldüğü için puan alamadınız.' \
 
 
             #Java
@@ -496,7 +695,7 @@ def submitcode(request):
                 question = practice_question.objects.get(id=question_id)
                 count = 0
                 item_count = question.practice_question_input_set.count()
-
+                item_point = question.point
 
                 for item in question.practice_question_input_set.all():
                     input_file = item.input_text
@@ -514,8 +713,6 @@ def submitcode(request):
                     output_line = read_output_file.readline()
                     answer_line = read_answer_file.readline()
 
-
-
                     while output_line != '' or answer_line != '':
 
                         output_line = output_line.rstrip()
@@ -529,17 +726,38 @@ def submitcode(request):
 
                 hacker = UserProfile.objects.get(user=request.user)
 
-                if count == 0:
-                    point += item_count * 5.0
+                user_list = []
+
+                user_query_list = question.solved_by_user.filter(username=hacker.user.username)
+
+                for solver_user in user_query_list:
+                    user_list.append(solver_user.username)
+
+                if count == 0 and not hacker.user.username in user_list:
+                    point += item_point
 
                     hacker.user.userprofile.point += point
+                    # solved_question.solved_question_name = question.question_area_name
+                    # solved_question.solved_by_user.add(hacker)
+                    question.solved_by_user.add(User.objects.get(username=hacker.user.username))
+
                     hacker.save()
+
+                    # question.save()
+                elif count == 0 and hacker.user.username in user_list:
+                    question_solved_count += 1
+                    print('soru yapildi')
+                    print(point)
+                    # response = '<h1 id = "correctAnswer">Doğru Cevap</h1>' + '\n' \
+                    # 'Ancak soru daha önce çözüldüğü için puan alamadınız.' \
+
 
             #PHP
             elif executor.language == "php":
                 question = practice_question.objects.get(id=question_id)
                 count = 0
                 item_count = question.practice_question_input_set.count()
+                item_point = question.point
 
                 for item in question.practice_question_input_set.all():
                     input_file = item.input_text
@@ -547,7 +765,6 @@ def submitcode(request):
 
                     executor.phpExecute(executor.code, input_file, output_file)
                     call(["node", "static/php_compiler.js"])
-
 
                     file_path = "static/data_files/output.txt"
                     answer_file_path = "static/data_files/answer.txt"
@@ -558,8 +775,6 @@ def submitcode(request):
                     output_line = read_output_file.readline()
                     answer_line = read_answer_file.readline()
 
-
-
                     while output_line != '' or answer_line != '':
 
                         output_line = output_line.rstrip()
@@ -573,11 +788,31 @@ def submitcode(request):
 
                 hacker = UserProfile.objects.get(user=request.user)
 
-                if count == 0:
-                    point += item_count*5.0
+                user_list = []
 
-                    hacker.user.userprofile.point += 5.0
+                user_query_list = question.solved_by_user.filter(username=hacker.user.username)
+
+                for solver_user in user_query_list:
+                    user_list.append(solver_user.username)
+
+                if count == 0 and not hacker.user.username in user_list:
+                    point += item_point
+
+                    hacker.user.userprofile.point += point
+                    # solved_question.solved_question_name = question.question_area_name
+                    # solved_question.solved_by_user.add(hacker)
+                    question.solved_by_user.add(User.objects.get(username=hacker.user.username))
+
                     hacker.save()
+
+                    # question.save()
+                elif count == 0 and hacker.user.username in user_list:
+                    question_solved_count += 1
+                    print('soru yapildi')
+                    print(point)
+                    # response = '<h1 id = "correctAnswer">Doğru Cevap</h1>' + '\n' \
+                    # 'Ancak soru daha önce çözüldüğü için puan alamadınız.' \
+
 
 
             #CSharp
@@ -591,14 +826,19 @@ def submitcode(request):
                     call(["node", "C:\\Users\\User\\PycharmProjects\\web_ilk\\staticfiles\\csharp_compiler.js"])
 
 
-            if point > 0:
+            if point > 0 and question_solved_count == 0:
                 response = '<h1 id = "correctAnswer">Tebrikler!</h1>' + '\n' \
-                           'Bütün testleri başarıyla geçerek ' + str(point) + ' puan kazandınız.'
-            else:
+                            'Bütün testleri başarıyla geçerek ' + str(point) + ' puan kazandınız.' \
+
+            elif point == 0 and question_solved_count != 0:
+                response = '<h1 id = "correctAnswer">Doğru Cevap!</h1>' + '\n' \
+                            '<a id="answerText">Ancak soruyu daha önce çözdüğünüz için puan alamadınız</a>'
+
+            elif point == 0:
                 response = '<h1 id = "wrongAnswer">Yanlış Cevap</h1>' + '\n' \
-                           'Bütün testlerden başarıyla geçemediniz.' \
-                           'Lütfen tekrar deneyin.' + '\n' + 'Diğer test girdilerini dikkate alarak ' \
-                           'programı tekrar yazmaya çalışın.'
+                               'Bütün testlerden başarıyla geçemediniz.' \
+                               'Lütfen tekrar deneyin.' + '\n' + 'Diğer test girdilerini dikkate alarak ' \
+                               'programı tekrar yazmaya çalışın.' \
 
 
             #file_path = "C:/Users/User/Desktop/output.txt"
@@ -638,9 +878,12 @@ def runCode(request):
             if executor.language == "python":
                 question = practice_question.objects.get(id=question_id)
 
-                input_item = question.practice_question_input_set.get(input_id=1)
-                input_file = input_item.input_text
-                output_file = input_item.output_text
+                input_file = question.question_input_text
+                output_file = question.question_answer_text
+
+                #input_item = question.practice_question_input_set.get(question_input_text)
+                #input_file = input_item.input_text
+                #output_file = input_item.output_text
 
                 executor.pythonExecute(executor.code, input_file, output_file)
                 #call(["node", "C:\\Users\\User\\PycharmProjects\\web_ilk\\staticfiles\\python_compiler.js"])
@@ -670,20 +913,19 @@ def runCode(request):
 
                 hacker = UserProfile.objects.get(user=request.user)
 
-                if count == 0:
-                    hacker.user.userprofile.point += 5.0
-                    hacker.save()
+                #if count == 0:
+                #    hacker.user.userprofile.point += 5.0
+                #    hacker.save()
 
             # C
             elif executor.language == "c":
                 question = practice_question.objects.get(id=question_id)
 
-                input_item = question.practice_question_input_set.get(input_id=1)
-                input_file = input_item.input_text
-                output_file = input_item.output_text
+                input_file = question.question_input_text
+                output_file = question.question_answer_text
 
                 executor.cExecute(executor.code, input_file, output_file)
-                #call(["node", "C:\\Users\\User\\PycharmProjects\\web_ilk\\staticfiles\\python_compiler.js"])
+                # call(["node", "C:\\Users\\User\\PycharmProjects\\web_ilk\\staticfiles\\python_compiler.js"])
                 call(["node", "static/compiler.js"])
 
                 file_path = "static/data_files/output.txt"
@@ -709,21 +951,15 @@ def runCode(request):
                     answer_line = read_answer_file.readline()
 
 
-                hacker = UserProfile.objects.get(user=request.user)
-
-                if count == 0:
-                    hacker.user.userprofile.point += 5.0
-                    hacker.save()
-
             # Java
             elif executor.language == "java":
                 question = practice_question.objects.get(id=question_id)
 
-                input_item = question.practice_question_input_set.get(input_id=1)
-                input_file = input_item.input_text
-                output_file = input_item.output_text
+                input_file = question.question_input_text
+                output_file = question.question_answer_text
 
                 executor.JavaExecute(executor.code, input_file, output_file)
+                # call(["node", "C:\\Users\\User\\PycharmProjects\\web_ilk\\staticfiles\\python_compiler.js"])
                 call(["node", "static/java_compiler.js"])
 
                 file_path = "static/data_files/output.txt"
@@ -748,14 +984,8 @@ def runCode(request):
                     output_line = read_output_file.readline()
                     answer_line = read_answer_file.readline()
 
-                hacker = UserProfile.objects.get(user=request.user)
 
-                if count == 0:
-                    hacker.user.userprofile.point += 5.0
-                    hacker.save()
-
-
-            # PHP
+                    # PHP
             elif executor.language == "php":
                 question = practice_question.objects.get(id=question_id)
 
@@ -824,6 +1054,9 @@ def runCode(request):
 
 def submitTutorialCode(request):
 
+
+    response = ''
+
     if request.is_ajax() and request.method == 'POST':
         try:
             executor = CodeExecutor(
@@ -877,6 +1110,9 @@ def submitTutorialCode(request):
                 if count == 0:
                     hacker.user.userprofile.point += 5.0
                     hacker.save()
+                    #response = messages.info(request, 'Tebrikler! Dersi gectiniz :) ')
+                    response = '<div class="alert">Tebrikler! Dersi Gectiniz</div>'
+
 
             elif executor.language == "C/C++":
                 question = Tutorial_Lecture.objects.get(id=lecture_question_id)
@@ -913,8 +1149,7 @@ def submitTutorialCode(request):
                 if count == 0:
                     hacker.user.userprofile.point += 5.0
                     hacker.save()
-
-
+                    response = '<h1 id = "correctAnswer">Tebrikler! Dersi gectiniz</h1>'
 
 
 
@@ -925,7 +1160,7 @@ def submitTutorialCode(request):
             # data = json.dumps(file)
             # mimetype = 'application/json'
 
-            return HttpResponse(file, content_type)
+            return HttpResponse(response, content_type)
 
         except Exception as e:
             logger.exception(e)
@@ -1028,8 +1263,6 @@ def runTutorialCode(request):
                     hacker.save()
 
 
-
-
             file_path = "static/data_files/output.txt"
             file = open(file_path, 'r+')
             content_type = 'text/plain'
@@ -1060,6 +1293,10 @@ class TutorialLectureView(generic.DetailView):
     template_name = 'polls/konular.html'
     model = tutorial
 
+    def get_object(self, **kwargs):
+        object = get_object_or_404(tutorial, slug=self.kwargs['slug'])
+        return object
+
     def get_queryset(self):
         return tutorial.objects.all()
 
@@ -1071,13 +1308,41 @@ class SubjectDetailsView(generic.DetailView):
         return Tutorial_Lecture.objects.all()
 
 
-class UserView(CreateView):
-    template_name = 'polls/user_profile.html'
-    model = User
-    fields = '__all__'
+class SearchDetailsView(View):
+    template_name = 'polls/searching_results.html'
+    model = practice_question, UserProfile, practice_area
+
+    def get(self, request):
+        global searching_list
+        questions = self.request.GET.get('searchname')
+        users = self.request.GET.get('searchname')
+
+        if questions or users:
+            question_list = practice_question.objects.filter(question_area_name__icontains=questions)
+            user_list = UserProfile.objects.filter(user__username__icontains=users)
+            searching_list = list(chain(question_list, user_list))
+
+        else:
+            question_list = practice_question.objects.all()
+            user_list = UserProfile.objects.all()
+
+        return render(request, self.template_name,
+                      {'searching_list' : searching_list,
+                       'user_list' : user_list,
+                       'question_list' : question_list})
 
     def get_queryset(self):
-        return User.objects.all()
+        return practice_area.objects.all() and UserProfile.objects.all()
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1162,6 +1427,14 @@ def practice(request):
 def post(request):
     template = loader.get_template('polls/post_form_upload.html')
     return HttpResponse(template.render(request))
+    
+    
+    
+    
+    
+    
+    
+    
 '''
 
 

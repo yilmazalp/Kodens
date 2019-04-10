@@ -5,6 +5,9 @@
     {{ form.media }}
     <div class="col-sm-6 col-lg-8" style="padding: 50px 200px; margin-left: 15%">
 
+
+    {% if request.user.username == practice_question.author|safe %}
+
         <div class="container-fluid">
 
             <form action="" method="post">{% csrf_token %}
@@ -25,8 +28,11 @@
 
         </div>
 
+    {% endif %}
 
-
+    {% if not request.user.username == practice_question.author|safe %}
+        <h1>yetkin yok</h1>
+    {% endif %}
 
 
     </div>

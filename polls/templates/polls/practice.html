@@ -8,18 +8,19 @@
 
 
     <div class="w3-container" style="width: 1500px; margin-top: -25px; background-color: #3b688e; height: 75px">
+        <h3 style="margin-top: 20px; color: white; margin-left: 75px">{{ practice.practice_area.area_name }}</h3>
         <h3 style="margin-top: 20px; color: white; margin-left: 75px">{{ practice_area.area_name}}</h3>
         <!--<hr style="border-color: #9ddff8; margin-top: 30px">-->
     </div>
+
 
     <div class="col-sm-3">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 {% for area_item in practice.all %}
                     <li style="height: 100px">
-                        <a href="{% url 'polls:detail' area_item.id %}">{{ area_item.practice_name }}</a>
+                        <a href="{% url 'polls:detail' area_item.slug %}">{{ area_item.practice_name }}</a>
                     </li>
-
                 {% endfor %}
             </ul>
 
@@ -28,24 +29,26 @@
 
     </div>
 
-
     {% for question_item in practice_area.practice_question_set.all %}
         <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="panel panel-default text-center"
                  style="height: 120px">
-                <a href="{% url 'polls:question_explain' question_item.id %}"
+
+                <a href="{% url 'polls:question_explain' practice_area.discipline.slug practice_area.area_slug question_item.question_slug %}"
                    style="text-decoration: none; color: #000000" >
                     <div class="col-sm-10 col-md-12">
                         <h4 style="margin-top: 10px; padding:10px; color: #074263">{{ question_item.question_area_name }}</h4>
-                        <button type="button" class="btn btn-primary" href="{% url 'polls:question_explain' question_item.id %}">
+                        <button type="button" class="btn btn-primary" href="{% url 'polls:question_explain' practice_area.discipline.slug practice_area.area_slug question_item.question_slug %}">
                             Soruyu Çöz
                         </button>
                     </div>
                 </a>
+
+
             </div>
         </div>
-
     {% endfor %}
+
 
 
 

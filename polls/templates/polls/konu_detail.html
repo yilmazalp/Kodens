@@ -35,7 +35,7 @@
         .container{
             width: 575px;
             height: 600px;
-            background-color: ghostwhite;
+            background-color: whitesmoke;
             overflow: scroll;
             margin-left: 75px;
 
@@ -60,7 +60,7 @@
 
 
     <div class="col-sm-6">
-        <div class="container">
+        <div class="container" style="margin-top: 22px">
             <h1 id="language">{{ tutorial_lecture.lecture_discipline }}</h1>
             <h4>{{ tutorial.tutorial_name }}</h4>
             <p>{{ tutorial_lecture.lecture_area_text|safe }}</p>
@@ -75,7 +75,9 @@
     </div>
 
 
-        <textarea id="template-html" name="code" class="CodeMirror" >print("Hello World! I am a Python compiler :)")</textarea>
+
+        <label for="template-html"></label>
+        <textarea id="template-html" name="code" class="CodeMirror"></textarea>
 
         <br>
 
@@ -94,8 +96,6 @@
         <pre id="output" class="container-fluid"></pre>
 
 
-
-
         <script type="text/javascript">
 
         var editor = CodeMirror.fromTextArea(document.getElementById('template-html'), {
@@ -105,12 +105,14 @@
                         indentWithTabs: true,
                         matchBrackets: true,
                         readOnly: false,
+
                     });
 
 
         function submitCode() {
 
             var prog = editor.getDoc().getValue();
+
 
             $.ajax({
                 type: 'POST',
@@ -127,6 +129,8 @@
                 },
 
             });
+
+
 
         }
 
@@ -160,6 +164,7 @@
             var output = $('#output');
 	        output.html('');
 	        output.append('<p>' + data + '</p>');
+
          }
 
          function runSuccess(data, textstatus, jqXHR) {
@@ -174,14 +179,10 @@
 	        $('#submit').click(submitCode);
 	        $('#run').click(runCode);
 
-
 	        //$('#language').click(selectLanguage);
             //$('input[type="radio"]').click(selectTheme);
 	        //editor = decorateCodeMirror($('#language').val());
         });
-
-
-
 
 
 

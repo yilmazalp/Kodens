@@ -52,7 +52,7 @@
 
 
             <div class="panel-body">
-                <a href="{% url 'polls:tutorial_lecture' tutorial_item.id %}"
+                <a href="{% url 'polls:tutorial_lecture' tutorial_item.slug %}"
                    style="text-decoration: none">
                     <p style="font-size: 30px; color: steelblue;
                     margin-top: 0; margin-bottom: 30px; padding: 25px">
@@ -66,7 +66,7 @@
 
             <div class="panel-footer">
                 <a class="btn btn-lg" href="{% url 'polls:tutorial_lecture' tutorial_item.id %}">
-                    <h3 style="font-size: 24px">
+                    <h3 style="font-size: 24px; margin-left: 0">
                         Konular
                     </h3>
                 </a>

@@ -1,0 +1,80 @@
+{% extends 'polls/base.html' %}
+
+{% block body %}
+
+
+    {% for searched_item in searching_list %}
+
+        {% if searched_item in question_list %}
+
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="panel panel-default text-center"
+                     style="height: 120px">
+
+                    <a href="{% url 'polls:question_explain' searched_item.practice_discipline.discipline.slug searched_item.practice_discipline.area_slug searched_item.question_slug %}"
+                       style="text-decoration: none; color: #000000" >
+                        <div class="col-sm-10 col-md-12">
+                            <h4 style="margin-top: 10px; padding:10px; color: #074263">{{ searched_item }}</h4>
+                            <button type="button" class="btn btn-primary" href="{% url 'polls:question_explain' searched_item.practice_discipline.discipline.slug searched_item.practice_discipline.area_slug searched_item.question_slug %}">
+                                Soruyu Çöz
+                            </button>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        {% endif %}
+
+        {% if searched_item in user_list %}
+
+            <div class="col-lg-4 col-md-4 col-sm-4">
+
+                    <div class="panel panel-default" style="margin-top: 50px; margin-left: 75px;
+                    width: 300px; background-color: ghostwhite; border: 1px ridge;">
+
+                        <div class="panel panel-heading" id="userProfilePanelHeading"
+                             style="background-image: url({{ searched_item.face_url }}">
+                        <!--img src="{#  #}{ user.userprofile.face_url|default_if_none:'static/media/AdaLovelace.png' }}"-->
+                        </div>
+
+
+
+                        <div class="panel panel-body" style="border: 1px solid transparent;
+                         background-color: ghostwhite; margin-left: 12.5%">
+                            <div class="text-center">
+
+                            <a href="{% url 'polls:hacker' searched_item %}"
+                               style="text-decoration: none; color: #000000" >
+                                <div class="col-sm-10 col-md-12">
+                                    <h4 style="margin-top: 10px; padding:10px; color: #074263">{{ searched_item }}</h4>
+                                    <button type="button" class="btn btn-primary" href="{% url 'polls:hacker' searched_item %}">
+                                        Profili Gör
+                                    </button>
+                                </div>
+                            </a>
+
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+            </div>
+
+            <!--a class="btn btn-success" style="width: 300px; font-size: medium; font-weight: bold" href="{% url 'polls:hacker' searched_item %}">
+                {#  #}{ searched_item }}
+            </a-->
+
+        {% endif %}
+
+    {% endfor %}
+
+
+
+
+{% endblock %}
+
+

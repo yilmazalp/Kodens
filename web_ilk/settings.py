@@ -55,6 +55,20 @@ INSTALLED_APPS = [
 
 ]
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+#EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+#EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
+
+
+#EMAIL_HOST = 'localhost'
+#EMAIL_PORT = 1025
+
+#EMAIL_HOST_USER = 'yilmazzalperen@gmail.com'
+#EMAIL_HOST_PASSWORD = 'mchl.TRNG00'
+#EMAIL_USE_TLS = True
+#DEFAULT_FROM_EMAIL = 'KodEn Team <noreply@koden.com>'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -103,17 +117,21 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'polls.validators.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'polls.validators.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'polls.validators.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'polls.validators.NumberValidator',
     },
+
+
+
+
 ]
 
 

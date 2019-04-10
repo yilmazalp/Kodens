@@ -1,0 +1,70 @@
+{% extends 'polls/base.html' %}
+
+<style>
+
+    table {
+        border: 1px solid black;
+        border-collapse: separate;
+        border-spacing: 15px;
+    }
+
+
+
+
+</style>
+
+{% block body %}
+
+
+    <div class="col-lg-12 col-md-10" style="padding: 50px 50px;">
+
+        <h2 style="font-weight: bold; color: #2D2D2D; margin-left: 40px">Çözülen Problemler</h2>
+
+
+        <table style="width: 100%; height: 100%; margin-left: 50px; margin-top: 100px">
+
+            {% for answer_item in object.practice_question_set.all %}
+                {#% if request.user.username in answer_item.solved_by_user  %#}
+
+                <tr>
+                    <th>{{ answer_item.practice_discipline }}</th>
+                    <th>{{ answer_item }}</th>
+
+                    <td>
+                        <a class="btn btn-primary" style="margin: auto"
+                           href="{% url 'polls:question_explain' answer_item.practice_discipline.discipline.slug  answer_item.practice_discipline.area_slug answer_item.question_slug %}">
+                            Soruyu Gör
+                        </a>
+
+                    </td>
+                    <td>
+                        <a class="btn btn-success" style="margin: auto"
+                           href="{% url 'polls:question_explain' answer_item.practice_discipline.discipline.slug  answer_item.practice_discipline.area_slug answer_item.question_slug %}">
+                            Çözüm İsteği Gönder
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><br></td>
+                </tr>
+
+                <tr>
+                    <td><br></td>
+                </tr>
+
+                <tr>
+                    <td><br></td>
+                </tr>
+
+                {#% endif %#}
+            {% endfor %}
+
+        </table>
+
+
+
+
+    </div>
+
+{% endblock %}

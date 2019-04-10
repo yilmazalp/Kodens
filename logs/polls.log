@@ -2483,3 +2483,709 @@ Traceback (most recent call last):
   File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
     (self.model._meta.object_name, num)
 polls.models.MultipleObjectsReturned: get() returned more than one practice_question_input -- it returned 2!
+ERROR 2018-07-13 22:56:07,148 polls.views.submitcode: 'UserProfile' object has no attribute 'solved_question_by_user'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 406, in submitcode
+    solved_question = hacker.solved_question_by_user
+AttributeError: 'UserProfile' object has no attribute 'solved_question_by_user'
+ERROR 2018-07-14 00:51:56,130 polls.views.submitcode: 'UserProfile' object has no attribute 'solved_question_by_user'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 406, in submitcode
+    solved_question = hacker.solved_question_by_user
+AttributeError: 'UserProfile' object has no attribute 'solved_question_by_user'
+ERROR 2018-07-14 00:52:53,442 polls.views.submitcode: Cannot assign "'Çarpým'": "SolvedQuestion.solved_question_name" must be a "practice_question" instance.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 451, in submitcode
+    solved_question.solved_question_name = question.question_area_name
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "'Çarpým'": "SolvedQuestion.solved_question_name" must be a "practice_question" instance.
+ERROR 2018-07-14 00:54:45,755 polls.views.submitcode: Cannot assign "'Çarpým'": "SolvedQuestion.solved_question_name" must be a "practice_question" instance.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 451, in submitcode
+    solved_question.solved_question_name = question.question_area_name
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "'Çarpým'": "SolvedQuestion.solved_question_name" must be a "practice_question" instance.
+ERROR 2018-07-14 00:59:03,224 polls.views.submitcode: "<SolvedQuestion: Çarpým>" needs to have a value for field "id" before this many-to-many relationship can be used.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 452, in submitcode
+    solved_question.solved_by_user = hacker
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 536, in __set__
+    manager = self.__get__(instance)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 513, in __get__
+    return self.related_manager_cls(instance)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 830, in __init__
+    (instance, self.pk_field_names[self.source_field_name]))
+ValueError: "<SolvedQuestion: Çarpým>" needs to have a value for field "id" before this many-to-many relationship can be used.
+ERROR 2018-07-14 01:06:37,340 polls.views.submitcode: Cannot assign "'Çarpým'": "SolvedQuestion.solved_question_name" must be a "practice_question" instance.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 451, in submitcode
+    solved_question.solved_question_name = question.question_area_name
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "'Çarpým'": "SolvedQuestion.solved_question_name" must be a "practice_question" instance.
+ERROR 2018-07-14 01:07:38,503 polls.views.submitcode: Cannot assign "'Çarpým'": "SolvedQuestion.solved_question_name" must be a "practice_question" instance.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 451, in submitcode
+    solved_question.solved_question_name = question.question_area_name
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "'Çarpým'": "SolvedQuestion.solved_question_name" must be a "practice_question" instance.
+ERROR 2018-07-14 01:17:03,386 polls.views.submitcode: "<SolvedQuestion: None>" needs to have a value for field "id" before this many-to-many relationship can be used.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 452, in submitcode
+    solved_question.solved_by_user.add(hacker)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 513, in __get__
+    return self.related_manager_cls(instance)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 830, in __init__
+    (instance, self.pk_field_names[self.source_field_name]))
+ValueError: "<SolvedQuestion: None>" needs to have a value for field "id" before this many-to-many relationship can be used.
+ERROR 2018-07-14 01:19:14,218 polls.views.submitcode: "<SolvedQuestion: None>" needs to have a value for field "id" before this many-to-many relationship can be used.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 452, in submitcode
+    solved_question.solved_by_user.add(hacker)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 513, in __get__
+    return self.related_manager_cls(instance)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 830, in __init__
+    (instance, self.pk_field_names[self.source_field_name]))
+ValueError: "<SolvedQuestion: None>" needs to have a value for field "id" before this many-to-many relationship can be used.
+ERROR 2018-07-14 01:21:37,290 polls.views.submitcode: SolvedQuestion matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 443, in submitcode
+    solved_question = SolvedQuestion.objects.get(solved_by_user__name=practice_question.question_area_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: SolvedQuestion matching query does not exist.
+ERROR 2018-07-14 01:25:14,982 polls.views.submitcode: int() argument must be a string or a number, not 'DeferredAttribute'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 443, in submitcode
+    solved_question = SolvedQuestion.objects.get(solved_question_name=practice_question.question_area_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string or a number, not 'DeferredAttribute'
+ERROR 2018-07-14 01:29:08,605 polls.views.submitcode: int() argument must be a string or a number, not 'DeferredAttribute'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 444, in submitcode
+    solved_question = SolvedQuestion.objects.get(solved_question_name=practice_question.question_area_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string or a number, not 'DeferredAttribute'
+ERROR 2018-07-14 01:30:19,394 polls.views.submitcode: int() argument must be a string or a number, not 'DeferredAttribute'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 444, in submitcode
+    solved_question = SolvedQuestion.objects.get(solved_question_name=practice_question.question_area_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string or a number, not 'DeferredAttribute'
+ERROR 2018-08-15 20:03:40,895 polls.views.submitcode: int() argument must be a string or a number, not 'DeferredAttribute'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 444, in submitcode
+    solved_question = SolvedQuestion.objects.get(solved_question_name=practice_question.question_area_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string or a number, not 'DeferredAttribute'
+ERROR 2018-08-15 20:04:05,287 polls.views.submitcode: int() argument must be a string or a number, not 'DeferredAttribute'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 444, in submitcode
+    solved_question = SolvedQuestion.objects.get(solved_question_name=practice_question.question_area_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string or a number, not 'DeferredAttribute'
+ERROR 2018-08-15 20:14:20,168 polls.views.submitcode: int() argument must be a string or a number, not 'DeferredAttribute'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 444, in submitcode
+    solved_question = SolvedQuestion.objects.get(solved_question_name=practice_question.question_area_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string or a number, not 'DeferredAttribute'
+ERROR 2018-08-15 20:42:25,266 polls.views.submitcode: Cannot resolve keyword 'solved_question_name' into field. Choices are: author, author_id, id, practice_discipline, practice_discipline_id, practice_question_input, question_answer_text, question_area_id, question_area_name, question_area_text, question_input_text, question_language_field, solved_by_user, solvedquestion
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 445, in submitcode
+    solved_question = practice_question.objects.get(solved_question_name = practice_question.question_area_name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1154, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1034, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'solved_question_name' into field. Choices are: author, author_id, id, practice_discipline, practice_discipline_id, practice_question_input, question_answer_text, question_area_id, question_area_name, question_area_text, question_input_text, question_language_field, solved_by_user, solvedquestion
+ERROR 2018-08-15 20:45:13,825 polls.views.submitcode: 'str' object has no attribute 'solved_by_user'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 453, in submitcode
+    solved_question.solved_by_user.add(hacker)
+AttributeError: 'str' object has no attribute 'solved_by_user'
+ERROR 2018-08-15 20:58:51,132 polls.views.submitcode: 'User' instance expected, got <UserProfile: alperen>
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 454, in submitcode
+    question.solved_by_user.add(hacker)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 934, in add
+    self._add_items(self.source_field_name, self.target_field_name, *objs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 1073, in _add_items
+    (self.model._meta.object_name, obj)
+TypeError: 'User' instance expected, got <UserProfile: alperen>
+ERROR 2018-08-15 21:01:32,406 polls.views.submitcode: create() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 454, in submitcode
+    question.solved_by_user.create(hacker)
+TypeError: create() takes 1 positional argument but 2 were given
+ERROR 2018-08-15 21:05:40,909 polls.views.submitcode: 'User' instance expected, got <UserProfile: zeki>
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 454, in submitcode
+    question.solved_by_user.add(hacker)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 934, in add
+    self._add_items(self.source_field_name, self.target_field_name, *objs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 1073, in _add_items
+    (self.model._meta.object_name, obj)
+TypeError: 'User' instance expected, got <UserProfile: zeki>
+ERROR 2018-08-15 21:11:29,284 polls.views.submitcode: 'User' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 455, in submitcode
+    question.solved_by_user.add(User.objects.get(request.user))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
+    arg, value = filter_expr
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\utils\functional.py", line 239, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not iterable
+ERROR 2018-08-15 22:16:35,939 polls.views.submitcode: invalid literal for int() with base 10: 'Alp Eren Yýlmaz'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 463, in submitcode
+    question.solved_by_user.add(hacker.name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 934, in add
+    self._add_items(self.source_field_name, self.target_field_name, *objs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 1083, in _add_items
+    '%s__in' % target_field_name: new_ids,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 56, in get_prep_lookup
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 56, in <listcomp>
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'Alp Eren Yýlmaz'
+ERROR 2018-08-15 22:34:02,246 polls.views.submitcode: Manager isn't accessible via UserProfile instances
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 465, in submitcode
+    question.solved_by_user.add(hacker.objects.get(name=hacker.name))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via UserProfile instances
+ERROR 2018-08-15 22:34:38,896 polls.views.submitcode: invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 465, in submitcode
+    question.solved_by_user.add(hacker.user.userprofile.name)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 934, in add
+    self._add_items(self.source_field_name, self.target_field_name, *objs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 1083, in _add_items
+    '%s__in' % target_field_name: new_ids,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 56, in get_prep_lookup
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 56, in <listcomp>
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+ERROR 2018-08-15 22:36:37,508 polls.views.submitcode: invalid literal for int() with base 10: 'cemkaraca'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 465, in submitcode
+    question.solved_by_user.add(hacker.user.username)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 934, in add
+    self._add_items(self.source_field_name, self.target_field_name, *objs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 1083, in _add_items
+    '%s__in' % target_field_name: new_ids,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 56, in get_prep_lookup
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 56, in <listcomp>
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'cemkaraca'
+ERROR 2018-08-15 22:38:23,974 polls.views.submitcode: 'str' object has no attribute 'pk'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 465, in submitcode
+    question.solved_by_user.add(hacker.user.username.pk)
+AttributeError: 'str' object has no attribute 'pk'
+ERROR 2018-08-15 22:53:01,309 polls.views.submitcode: get() returned more than one User -- it returned 6!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 465, in submitcode
+    question.solved_by_user.add(User.objects.get(userprofile__solvedquestion__solved_by_user=hacker))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+django.contrib.auth.models.MultipleObjectsReturned: get() returned more than one User -- it returned 6!
+ERROR 2018-08-15 22:53:37,098 polls.views.submitcode: too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 465, in submitcode
+    question.solved_by_user.add(User.objects.get('cemkaraca'))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
+    arg, value = filter_expr
+ValueError: too many values to unpack (expected 2)
+ERROR 2018-08-15 22:54:13,571 polls.views.submitcode: invalid literal for int() with base 10: 'cemkaraca'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 465, in submitcode
+    question.solved_by_user.add(User.objects.get(userprofile='cemkaraca'))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'cemkaraca'
+ERROR 2018-08-15 22:55:43,934 polls.views.submitcode: get() returned more than one User -- it returned 3!
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 465, in submitcode
+    question.solved_by_user.add(User.objects.get(userprofile__name=hacker.name))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 384, in get
+    (self.model._meta.object_name, num)
+django.contrib.auth.models.MultipleObjectsReturned: get() returned more than one User -- it returned 3!
+ERROR 2018-08-15 22:58:13,286 polls.views.submitcode: 'User' instance expected, got <UserProfile: cemkaraca>
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 465, in submitcode
+    question.solved_by_user.add(UserProfile.objects.get(id=hacker.pk))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 934, in add
+    self._add_items(self.source_field_name, self.target_field_name, *objs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 1073, in _add_items
+    (self.model._meta.object_name, obj)
+TypeError: 'User' instance expected, got <UserProfile: cemkaraca>
+ERROR 2018-08-15 22:59:37,285 polls.views.submitcode: Cannot resolve keyword 'user' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, practice_question, user_permissions, username, userprofile
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 405, in submitcode
+    solver = User.objects.get(user=request.user)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1154, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1034, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'user' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, practice_question, user_permissions, username, userprofile
+ERROR 2018-08-15 23:02:27,681 polls.views.submitcode: User matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 466, in submitcode
+    question.solved_by_user.add(User.objects.get(userprofile__name=hacker.user.username))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+django.contrib.auth.models.DoesNotExist: User matching query does not exist.
+ERROR 2018-08-15 23:02:56,076 polls.views.submitcode: invalid literal for int() with base 10: 'cemkaraca'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 466, in submitcode
+    question.solved_by_user.add(User.objects.get(userprofile=hacker.user.username))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'cemkaraca'
+ERROR 2018-08-15 23:03:48,895 polls.views.submitcode: Cannot resolve keyword 'user' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, practice_question, user_permissions, username, userprofile
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 466, in submitcode
+    question.solved_by_user.add(User.objects.get(user=hacker.user.username))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1154, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1034, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\sql\query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'user' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, practice_question, user_permissions, username, userprofile
+ERROR 2018-08-15 23:17:51,737 polls.views.submitcode: argument of type 'ManyRelatedManager' is not iterable
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 458, in submitcode
+    if 'alperen' in question.solved_by_user:
+TypeError: argument of type 'ManyRelatedManager' is not iterable
+ERROR 2018-08-15 23:25:02,470 polls.views.submitcode: 'manager'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 458, in submitcode
+    if 'alperen' in question.solved_by_user():
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\fields\related_descriptors.py", line 842, in __call__
+    manager = getattr(self.model, kwargs.pop('manager'))
+KeyError: 'manager'
+ERROR 2018-08-16 00:04:44,582 polls.views.submitcode: Manager isn't accessible via practice_question instances
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 461, in submitcode
+    solver_count = question.objects.filter(solved_by_user=hacker.user.username)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via practice_question instances
+ERROR 2018-08-16 00:06:26,768 polls.views.submitcode: Manager isn't accessible via practice_question instances
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 461, in submitcode
+    solver_count = question.objects.filter(solved_by_user__username=hacker.user.username)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via practice_question instances
+ERROR 2018-08-16 22:14:58,797 polls.views.submitTutorialCode: __init__() got an unexpected keyword argument 'messages'
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 965, in submitTutorialCode
+    return HttpResponse(messages='Tebrikler dersi gectin')
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\http\response.py", line 301, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'messages'
+ERROR 2018-08-22 19:18:19,349 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 720, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-08-22 19:20:23,745 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 720, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-08-22 19:56:39,736 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 723, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-08-22 19:56:42,338 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 723, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-08-22 19:56:47,384 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 723, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-08-24 03:18:41,550 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 731, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-08-25 01:35:12,986 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 735, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-08-26 17:12:34,261 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 735, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-09-27 14:04:14,337 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 813, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-09-27 14:08:14,556 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 813, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-09-27 14:10:43,759 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 813, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-09-29 19:43:57,844 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 859, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-11-02 01:01:13,792 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 920, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-11-02 01:04:45,490 polls.views.runCode: practice_question_input matching query does not exist.
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 920, in runCode
+    input_item = question.practice_question_input_set.get(input_id=1)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Roaming\Python\Python34\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+polls.models.DoesNotExist: practice_question_input matching query does not exist.
+ERROR 2018-11-03 21:31:46,273 polls.views.submitcode: Can't convert 'int' object to str implicitly
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\web_ilk\polls\views.py", line 595, in submitcode
+    print("sayac: " + count)
+TypeError: Can't convert 'int' object to str implicitly

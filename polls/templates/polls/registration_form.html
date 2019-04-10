@@ -1,31 +1,71 @@
 {% extends 'polls/base.html' %}
+{% load static %}
 {% block title  %}Kayıt Ol{% endblock %}
 
 {% block body %}
+
+<style>
+
+    .row{
+        background-image: url({% static 'media/kaydol.jpeg' %});
+        background-size: 100%;
+        height: 550px;
+        margin-top: -25px;
+    }
+
+
+    .panel-transparent{
+        margin-top: 75px;
+        height: 300px;
+        background: none;
+        border: none;
+
+    }
+
+    .panel-transparent .panel-body {
+	    background: rgba(46, 51, 56, 0)!important;
+    }
+
+
+    .form-horizontal{
+        margin-top: 5px;
+
+
+    }
+
+
+</style>
 
 <div class="container-fluid">
 
     <div class="row">
         <div class="col-sm-12 col-md-7">
-            <div class="panel panel-default" style="margin-left: 50%; background-color: whitesmoke">
+            <div class="panel panel-transparent" style="margin-left: 50%">
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         {#% include 'polls/practice_form.html' %#}
-                        {{ form.media }}
-                        {% for field in form %}
-                            <div class="form-group text-center">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <span class="text-danger small">{{ field.errors }}</span>
+
+                        {% if form.errors %}
+
+                            {% for field in form %}
+                                <div class="form-group text-center">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <span class="text-danger small">{{ field.errors }}</span>
+                                    </div>
+
+                                    <label class="control-group text-center" >
+                                        <!--input class="form-control" value=""-->
+                                        {{ field }}
+                                    </label>
+
                                 </div>
+                            {% endfor %}
 
-                                <label class="control-group text-center" >
-                                    <!--input class="form-control" value=""-->
-                                    {{ field }}
-                                </label>
+                        {% endif %}
 
-                            </div>
-                        {% endfor %}
+
+
 
 
                         <div class="form-group text-center">

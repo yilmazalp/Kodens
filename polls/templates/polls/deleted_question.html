@@ -1,0 +1,36 @@
+{% extends 'polls/base.html' %}
+
+{% block body %}
+
+    {{ form.media }}
+    <div class="col-sm-6 col-lg-8" style="padding: 50px 200px; margin-left: 15%">
+
+
+    {% if request.user.username == practice_question.author|safe %}
+
+        <div class="container-fluid">
+            <div class="text-center">
+                <h4>Soru silindi</h4>
+                <a class="btn btn-primary" style="margin: auto" href="{% url 'polls:index' %}">
+                                Anasayfaya Dön
+                </a>
+            </div>
+        </div>
+
+    {% endif %}
+
+    {% if not request.user.username == practice_question.author|safe %}
+        <div class="container-fluid">
+            <div class="text-center">
+                <h4>Soruyu silemezsiniz. Yetki yok.</h4>
+                <a class="btn btn-primary" style="margin: auto" href="{% url 'polls:index' %}">
+                                Anasayfaya Dön
+                </a>
+            </div>
+        </div>
+    {% endif %}
+
+
+    </div>
+
+{% endblock %}

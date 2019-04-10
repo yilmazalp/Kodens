@@ -7,7 +7,9 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from multiselectfield import MultiSelectField
+from django.template.defaultfilters import slugify
 from django.conf import settings
+
 
 MY_CHOICES = (('c', 'C'),
               ('c++', 'C++'),
@@ -16,7 +18,10 @@ MY_CHOICES = (('c', 'C'),
               ('java', 'Java'),
               )
 
-
+LEVEL_CHOICES = (('kolay', 'KOLAY'),
+                 ('orta', 'ORTA'),
+                 ('zor', 'ZOR'),
+                 ('çok zor', 'ÇOK ZOR'))
 
 
 
@@ -29,6 +34,8 @@ class UserProfile(models.Model):
     website = models.URLField(default='')
     phone = models.IntegerField(default=0)
     face = models.FileField(default='')
+    #solved_questions = models.ManyToManyField(SolvedQuestions)
+
 
     @property
     def face_url(self):
@@ -38,8 +45,10 @@ class UserProfile(models.Model):
     #location = models.CharField(max_length=30, blank=True)
     #birth_date = models.DateField(null=True, blank=True)
 
+
+
     def get_absolute_url(self):
-        return reverse('polls:hacker', kwargs={'pk': self.pk})
+        return reverse('polls:hacker', kwargs={'username': self.user.username})
 
 
     def __str__(self):  # __unicode__ for Python 2
@@ -52,6 +61,9 @@ def create_profile(sender, **kwargs):
 
 
 post_save.connect(create_profile, sender=User)
+
+
+
 
 
 '''
@@ -88,6 +100,12 @@ class tutorial(models.Model):
     tutorial_name = models.CharField(max_length=250)
     tutorial_id = models.CharField(max_length=250)
     tutorial_logo = models.CharField(max_length=250, default='')
+    slug = models.SlugField(max_length=40, unique=True, default='')
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.tutorial_name.replace('ı', 'i'))
+        return super(tutorial, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.tutorial_name
@@ -105,7 +123,7 @@ class tutorial_language(models.Model):
 class Tutorial_Lecture(models.Model):
     lecture_discipline = models.ForeignKey(tutorial, on_delete=models.CASCADE)
     lecture_area_name = models.CharField(max_length=100, default='')
-    lecture_area_text = RichTextField(max_length=750, default='')
+    lecture_area_text = RichTextField(max_length=7500, default='')
     lecture_area_input = models.TextField(max_length=150, default='')
     lecture_area_output = models.TextField(max_length=150, default='')
 
@@ -127,6 +145,13 @@ class practice(models.Model):
     practice_name = models.CharField(max_length=250)
     practice_id = models.CharField(max_length=250)
     practice_logo = models.CharField(max_length=250, default='')
+    slug = models.SlugField(max_length=40, unique=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.practice_name.replace('ı', 'i'))
+        return super(practice, self).save(*args, **kwargs)
+
 
     def __str__(self):
         return self.practice_name
@@ -135,6 +160,15 @@ class practice_area(models.Model):
     discipline = models.ForeignKey(practice, on_delete=models.CASCADE)
     area_id = models.CharField(max_length=250)
     area_name = models.CharField(max_length=250)
+    area_slug = models.SlugField(max_length=260, unique=True, default='')
+
+    def save(self, *args, **kwargs):
+        if not self.area_slug:
+            self.area_slug = slugify(self.area_name.replace('ı', 'i'))
+        return super(practice_area, self).save(*args, **kwargs)
+
+    def get_absolute_url(self, *args, **kwargs):
+        return reverse('polls:detail', kwargs={'area_slug': self.area_slug})
 
     def __str__(self):
         return self.area_name
@@ -148,10 +182,30 @@ class practice_question(models.Model):
     question_input_text = models.TextField(max_length=150, default='', verbose_name='girdi formatı')
     question_answer_text = models.TextField(max_length=150, default='', verbose_name='çıktı formatı')
     question_language_field = MultiSelectField(choices=MY_CHOICES, default='', verbose_name='kullanılacak diller')
+    solved_by_user = models.ManyToManyField(User)
+    question_slug = models.SlugField(max_length=110, unique=True, default='', editable=False)
+    level = models.CharField(max_length=10, choices=LEVEL_CHOICES, default='kolay')
+    point = models.FloatField(default=0)
 
 
-    def get_absolute_url(self):
-        return reverse('polls:detail', kwargs={'pk': self.pk})
+    def get_unique_slug(self):
+        question_slug = slugify(self.question_area_name.replace('ı', 'i'))
+        unique_slug = question_slug
+        counter = 1
+        while practice_question.objects.filter(question_slug=unique_slug).exists():
+            unique_slug = '{}-{}'.format(question_slug, counter)
+            counter += 1
+        return unique_slug
+
+
+    def save(self, *args, **kwargs):
+        if not self.question_slug:
+            self.question_slug = self.get_unique_slug()
+        return super(practice_question, self).save(*args, **kwargs)
+
+
+    def get_absolute_url(self, *args, **kwargs):
+        return reverse('polls:question_detail', kwargs={'question_slug': self.question_slug})
 
 
     def __str__(self):
@@ -172,6 +226,39 @@ class practice_question_input(models.Model):
         return str(self.input_belong_practice)
 
 
+class SolvedQuestion(models.Model):
+    solved_by_user = models.ManyToManyField(UserProfile)
+    solved_question_name = models.ForeignKey(practice_question, on_delete=models.CASCADE, null=True)
+    solved_question_id = models.CharField(max_length=5, default='')
+
+    def __str__(self):
+        return str(self.solved_question_name)
+
+
+class Friend(models.Model):
+    friend_user = models.ManyToManyField(UserProfile)
+    current_user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name='owner', null=True)
+
+
+    @classmethod
+    def add_friend(cls, current_user, new_friend):
+        friend, created = cls.objects.get_or_create(current_user=current_user)
+        friend.friend_user.add(new_friend)
+
+
+    @classmethod
+    def remove_friend(cls, current_user, new_friend):
+        friend, created = cls.objects.get_or_create(current_user=current_user)
+        friend.friend_user.remove(new_friend)
+
+    def __str__(self):
+        return str(self.current_user)
+
+
+
+
+
+
 class challenge(models.Model):
     challenge_name = models.CharField(max_length=250)
     challenge_id = models.CharField(max_length=250)
@@ -183,3 +270,7 @@ class Job(models.Model):
 
     def __str__(self):
         return str(self.company_name)
+
+
+
+

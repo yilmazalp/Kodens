@@ -284,8 +284,7 @@
             height: 75px;
             width: 100%;
             bottom: 0;
-            margin-top: 50px;
-
+            margin-top: 100px;
 
         }
 
@@ -310,7 +309,18 @@
         }
 
 
+        #userProfilePanelHeading{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            text-align: center;
+            background-image: url("{{ user.userprofile.face_url }}");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
 
+        }
 
 
         /*#subArea{
@@ -372,10 +382,10 @@
 
                         <li>
 
-                            <form class="form-inline" action="" method="GET">
+                            <form class="form-inline" action="{% url 'polls:search' %}" method="GET">
 
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Ara" id="txtSearch"/>
+                                <input type="text" class="form-control" placeholder="Ara" name="searchname" id="txtSearch"/>
                                 <div class="input-group-btn">
                                     <button id="searchButton" class="btn btn-primary" type="submit">
                                         <span id="searchIconArea" class="glyphicon glyphicon-search"></span>
@@ -395,12 +405,12 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#" id="userDropdown" class="dropdown-toggle" data-toggle="dropdown">
-                                {{ user.username }}
+                                {{ request.user.username }}
                                 <span class="glyphicon glyphicon-triangle-bottom" style="margin-right: 15px"></span>
                             </a>
                             <ul class="dropdown-menu" id="userDropdownList">
                                 <li>
-                                    <a href="{% url 'polls:hacker' user.id %}">
+                                    <a href="{% url 'polls:hacker' request.user.username %}">
                                         <span class="glyphicon glyphicon-user" style="margin-right: 5px"></span>&nbsp;Kullanıcı Profili
                                     </a>
                                 </li>
@@ -412,7 +422,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="{% url 'polls:edit_profile' user.id %}">
+                                    <a href="{% url 'polls:edit_profile' %}">
                                         <span  class="glyphicon glyphicon-wrench" style="margin-right: 5px"></span>&nbsp;Profili Düzenle
                                     </a>
                                 </li>
@@ -465,7 +475,6 @@
 </body>
 
 <footer>
-
      <div id="footarea" class="col-md-12 col-sm-12">
          <p style="color: white">Tüm hakları saklıdır</p>
      </div>

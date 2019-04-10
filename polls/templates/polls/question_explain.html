@@ -109,16 +109,22 @@
 */
         #output{
             visibility: hidden;
+            background-color: white;
+            margin-top: 25px;
         }
 
         #output #wrongAnswer{
-            color: red;
-            margin-left: 400px;
+            color: darkred;
+            text-align: center;
         }
 
         #output #correctAnswer{
-            color: green;
-            margin-left: 400px;
+            color: darkgreen;
+            text-align: center;
+        }
+
+        #output #answerText{
+            text-align: center;
         }
 
         .show {display:block;}
@@ -252,17 +258,14 @@
                 <br>
                 <br>
 
-                <pre id="output"></pre>
-
 
         </div>
 
+        <div class="col-sm-11">
+              <pre id="output"></pre>
+        </div>
+
     </div>
-
-
-
-
-
 
 
     <br>
@@ -320,8 +323,6 @@
 	        output.html('');
 	        output.append('<p>' + data + '</p>');
         }
-
-
 
 
         $('#languageList').find('li').on('click', function(){

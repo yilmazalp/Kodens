@@ -10,34 +10,48 @@
         margin-left: 200px;
     }
 
+    #inputKaydet{
+        margin-left: 290px;
+    }
+
+    #tekrarEkle{
+        width: 384px;
+        margin-top: 25px;
+        margin-left: 100px;
+    }
+
+
+
 
 </style>
 
     <div class="container-fluid" style="margin-left: 75px">
 
-        <h2>Girdiler</h2>
-        <p>{{ question.question_area_name }}</p>
-             <div class="form-group">
 
-                {{formset.management_form}}
+        <h3 style="font-weight: bold">{{ question.question_area_name }}</h3>
 
-                <form action="" method="post">{% csrf_token %}
-                    <div class="row" style="margin-left: -270px">
-                        {{ formset.management_form }}
-                        {% for form in formset %}
-                            <div class="col-sm-offset-2 col-sm-3">
-                                {{ form }}
-                                {{ question.field }}
-                            </div>
+        <div class="col-sm-11 col-lg-16">
+        <div class="form-group" style="margin-left: -100px;">
+        {{ formset.management_form }}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ formset.management_form }}
+                    <div class="row">
+                        {% for formfield in formset %}
+                            {{ formfield }}
+                            {{ formfield.delete }}
 
+                            <hr style="background-color: green">
                         {% endfor %}
+
                     </div>
-
-                <button style="width: 384px; margin-top: 25px" type="submit" class="btn btn-success">Kaydet</button>
-
+                    <button id="inputKaydet" style="width: 384px; margin-top: 25px;" class="btn btn-success">Kaydet</button>
+                    <a id="tekrarEkle" class="btn btn-info" href="{% url 'polls:input' question.question_slug %}">Güncelle</a>
                 </form>
 
-             </div>
+        </div>
+
+        </div>
 
 
 
